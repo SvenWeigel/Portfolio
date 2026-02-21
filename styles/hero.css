@@ -1,6 +1,6 @@
 #hero-header {
   display: flex;
-  margin-left: 207px;
+  justify-content: center;
   margin-top: 188px;
 
 }
@@ -51,12 +51,37 @@
 }
 
 #hero-seperator {
-  width: 100px;
+  width: 56px;
   height: 0;
-  border: 2px solid rgb(112, 230, 28);
+  border-top: 3px solid rgb(112, 230, 28);
+}
+
+#hero-footer-wrapper{
+    margin-bottom: 0;
+    margin-left: 0;
 }
 
 #hero-footer{
-    margin-bottom: 0;
-    margin-left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 42px;
+}
+
+#hero-social-links{
+    display: flex;
+    gap: 42px;
+}
+
+#scroll-down {
+  position: fixed;
+  right: 0px;
+  bottom: 24px;
+  writing-mode: vertical-lr; 
+  transform: rotate(180deg); 
+  color: #cbd5e1;
+  font-weight: 400;
+  font-size: 23px;
+  z-index: 60;
+  background: transparent;
 }
