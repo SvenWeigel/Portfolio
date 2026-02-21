@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   margin-top: 188px;
-
 }
 
 .iam {
@@ -38,13 +37,13 @@
   line-height: 120%;
 }
 
-#lets-talk-btn-wrapper  {
- display: flex;
-    justify-content: center;
-    margin-top: 72px;
+#lets-talk-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 72px;
 }
 
-#hero-footer-wrapper {  
+#hero-footer-wrapper {
   display: flex;
   justify-content: flex-start;
   margin-top: 216px;
@@ -56,30 +55,27 @@
   border-top: 3px solid rgb(112, 230, 28);
 }
 
-#hero-footer-wrapper{
-    margin-bottom: 0;
-    margin-left: 0;
+#hero-footer-wrapper {
+  margin-bottom: 0;
+  margin-left: 0;
 }
 
-#hero-footer{
+#hero-footer {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 42px;
 }
 
-#hero-social-links{
-    display: flex;
-    gap: 42px;
+#hero-social-links {
+  display: flex;
+  gap: 42px;
 }
 
 #scroll-down {
-  position: fixed;
-  right: 0px;
-  bottom: 24px;
-  writing-mode: vertical-lr; 
-  transform: rotate(180deg); 
-  color: #cbd5e1;
+  writing-mode: vertical-lr;
+  transform: rotate(360deg);
+  color: white;
   font-weight: 400;
   font-size: 23px;
   z-index: 60;
