@@ -19,6 +19,8 @@ header {
 #header-nav{
     font-size: 23px;
     font-weight: 400;
+    display: flex;
+    gap: 29px;
 }
 
 #header-language{

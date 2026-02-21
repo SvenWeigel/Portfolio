@@ -1,51 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/skills.css">
-    <link rel="stylesheet" href="styles/references.css">
-    <link rel="stylesheet" href="styles/portfolio.css">
-    <link rel="stylesheet" href="styles/hero.css">
-    <link rel="stylesheet" href="styles/contact.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/contact.css">
-    <link rel="stylesheet" href="styles/footer.css">
-    <link rel="stylesheet" href="styles/about-me.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/skills.css" />
+    <link rel="stylesheet" href="styles/references.css" />
+    <link rel="stylesheet" href="styles/portfolio.css" />
+    <link rel="stylesheet" href="styles/hero.css" />
+    <link rel="stylesheet" href="styles/contact.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/contact.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/about-me.css" />
     <script src="script.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="site-wrapper">
-    <header>
+      <header>
         <div id="header-name">
-            <a href="#">Sven</a>
+          <a href="#">Sven</a>
         </div>
 
         <div id="header-nav-language-position">
-        <div id="header-nav">
+          <div id="header-nav">
             <a href="#about-me">About me</a>
             <a href="#skills">Skills</a>
             <a href="#portfolio">Portfolio</a>
+          </div>
+          <div id="header-language">
+            <button>
+              <img src="assets/icons/de-btn-activ.svg" alt="deutsch" />
+            </button>
+            <button><img src="assets/icons/en-btn.svg" alt="english" /></button>
+          </div>
         </div>
-        <div id="header-language">
-            <button><img src="assets/icons/de-btn-activ.svg" alt="deutsch"></button>
-            <button><img src="assets/icons/en-btn.svg" alt="english"></button>
-        </div>
-        </div>
-    </header>
+      </header>
 
-    <main>
-        <section id="hero"></section>
+      <main>
+        <section id="hero">
+          <div id="hero-header">
+            <span class="iam">I am</span>
+            <div class="hero-name-job">
+              <span id="hero-name">Sven Weigel</span>
+              <span id="hero-job">FRONTEND DEVELOPER</span>
+            </div>
+          </div>
+
+          <div id="lets-talk-btn-wrapper">
+          <a id="lets-talk-btn" class="general-btn" href="#contact">
+            Let's Talk
+          </a>
+          </div>
+
+          <div id="hero-footer">
+            <div id="hero-footer-wrapper">
+                <div id="hero-seperator"></div>
+                <div id="git-hub-link"></div>
+                <div id="mail-link"></div>
+                <div id="linkedin-link"></div>
+            </div>
+          </div>
+
+        </section>
         <section id="about-me"></section>
         <section id="skills"></section>
         <section id="portfolio"></section>
         <section id="references"></section>
         <section id="contact"></section>
-</main>
-        <footer></footer>
+      </main>
+      <footer></footer>
     </div>
-</body>
+  </body>
 </html>

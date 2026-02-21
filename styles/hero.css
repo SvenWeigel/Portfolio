@@ -1,0 +1,62 @@
+#hero-header {
+  display: flex;
+  margin-left: 207px;
+  margin-top: 188px;
+
+}
+
+.iam {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  display: flex;
+  font-weight: 400;
+  font-size: 90px;
+  color: white;
+  padding-left: 35px;
+  margin-bottom: 10px;
+  line-height: 120%;
+}
+
+.hero-name-job {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+#hero-name {
+  font-size: 128px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 120%;
+}
+
+#hero-job {
+  font-size: 64px;
+  font-weight: 400;
+  margin: 0;
+  color: rgb(113, 93, 254);
+  line-height: 120%;
+}
+
+#lets-talk-btn-wrapper  {
+ display: flex;
+    justify-content: center;
+    margin-top: 72px;
+}
+
+#hero-footer-wrapper {  
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 216px;
+}
+
+#hero-seperator {
+  width: 100px;
+  height: 0;
+  border: 2px solid rgb(112, 230, 28);
+}
+
+#hero-footer{
+    margin-bottom: 0;
+    margin-left: 0;
+}
