@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "Roboto";
+  src: url(fonts/Roboto-VariableFont_wdth\,wght.ttf) format("truetype");
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Roboto", sans-serif, Arial, Helvetica, sans-serif;
+  background-color: rgb(20, 29, 47);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.site-wrapper {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
