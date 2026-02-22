@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1">
+      <stop offset="0%" stop-color="#7F7FD5" />
+      <stop offset="100%" stop-color="#86A8E7" />
+    </linearGradient>
+    <linearGradient id="hair" x1="0" x2="1">
+      <stop offset="0%" stop-color="#2E1A47" />
+      <stop offset="100%" stop-color="#4B2E8A" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg)" />
+  <!-- shoulders / body -->
+  <rect x="220" y="760" rx="60" ry="60" width="760" height="320" fill="#253746" opacity="0.95" />
+  <!-- face -->
+  <ellipse cx="600" cy="500" rx="240" ry="300" fill="#F2D6C9" />
+  <!-- hair -->
+  <path d="M360 390 C360 220, 840 220, 840 390 L840 430 C840 430, 780 340, 600 340 C420 340, 360 430, 360 430 Z" fill="url(#hair)" />
+  <!-- left eye -->
+  <ellipse cx="520" cy="500" rx="36" ry="22" fill="#fff" />
+  <circle cx="520" cy="502" r="10" fill="#2B2B2B" />
+  <!-- right eye -->
+  <ellipse cx="680" cy="500" rx="36" ry="22" fill="#fff" />
+  <circle cx="680" cy="502" r="10" fill="#2B2B2B" />
+  <!-- nose -->
+  <path d="M600 520 q-10 18 0 36" stroke="#c99" stroke-width="6" fill="none" stroke-linecap="round" />
+  <!-- mouth -->
+  <path d="M560 600 q40 30 80 0" stroke="#b35a4a" stroke-width="6" fill="none" stroke-linecap="round" />
+  <!-- subtle blush -->
+  <circle cx="490" cy="560" r="18" fill="#ffb6b6" opacity="0.25" />
+  <circle cx="710" cy="560" r="18" fill="#ffb6b6" opacity="0.25" />
+  <!-- simple glasses (optional) -->
+  <g stroke="#444" stroke-width="4" fill="none">
+    <rect x="480" y="478" width="80" height="44" rx="14" />
+    <rect x="640" y="478" width="80" height="44" rx="14" />
+    <line x1="560" y1="500" x2="640" y2="500" />
+  </g>
+</svg>
