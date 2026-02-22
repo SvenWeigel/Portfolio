@@ -63,11 +63,18 @@
   padding: 16px 8px 16px 8px;
 }
 
+#lerning-icon{
+filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);
+;
+}
+
 #skills-description-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  color: white;
+  font-size: 16px;
 }
 
 #skills-head {
@@ -87,4 +94,17 @@
   height: 0;
   border: none;
   border-top: 4px solid rgba(28, 218, 230, 1);
+}
+
+#other-skills-need{
+    font-size: 32px;
+    font-weight: 700;
+}
+
+#other-skills-need span {
+    color:rgba(151, 71, 255, 1);
+}
+
+#btn-div{
+    margin-top: 40px;
 }
