@@ -6,12 +6,14 @@
 html, body {
   height: 100%;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Roboto", sans-serif, Arial, Helvetica, sans-serif;
   background-color: rgb(20, 29, 47);
   min-height: 100vh;
+  
 }
 
 a {
