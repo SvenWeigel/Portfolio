@@ -31,9 +31,10 @@
 }
 
 #portfolio-seperator {
-  width: 68px;
+  flex: 1 1 auto;
   height: 0;
   border: none;
   border-top: 4px solid rgba(28, 218, 230, 1);
-  margin-right: 32px;
+  margin-left: 32px;
+  align-self: center;
 }
