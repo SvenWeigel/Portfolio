@@ -3,7 +3,8 @@
   src: url(fonts/Roboto-VariableFont_wdth\,wght.ttf) format("truetype");
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   scroll-behavior: smooth;
@@ -12,8 +13,6 @@ html, body {
 body {
   font-family: "Poppins", sans-serif, Arial, Helvetica, sans-serif;
   background-color: rgb(20, 29, 47);
-  min-height: 100vh;
-  
 }
 
 a {
@@ -21,14 +20,21 @@ a {
   color: inherit;
 }
 
-.site-wrapper {
-  max-width: 1920px;
-  margin: 0 auto;
+/* main {
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  margin: 0 auto;
+} */
+
+.content{
+  width: 100%;
+  max-width: 1920px;
+  height: 100%;
 }
 
 .general-btn {
-  background-color:rgba(112, 230, 28, 1);
+  background-color: rgba(112, 230, 28, 1);
   color: white;
   border: none;
   border-radius: 10px;

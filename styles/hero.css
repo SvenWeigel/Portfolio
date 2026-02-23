@@ -1,7 +1,9 @@
 #hero-header {
-  display: flex;
-  justify-content: center;
   margin-top: 188px;
+}
+
+#who-am-i {
+  display: flex;
 }
 
 .iam {
@@ -56,24 +58,17 @@
 }
 
 #hero-footer {
-  position: absolute;
-  bottom: 20px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 0;
-  z-index: 4;
+  height: auto;
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 #hero-position-div {
   display: flex;
-
   align-items: center;
   gap: 24px;
+  justify-content: center;
 }
 
 #hero-social-links {
@@ -90,25 +85,15 @@
   cursor: pointer;
 }
 
-
-
-main {
-  flex: 1 0 auto;
-  display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 1920px;
-    margin: 0 auto;
-}
-
-
 #hero {
-  min-height: calc(100vh - 109px);
+  min-height: calc(100vh - 114px);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
-#hero-scroll-div{
-  max-width: 1920px;
+#hero-flex-div {
+  display: flex;
+  justify-content: space-between;
 }
