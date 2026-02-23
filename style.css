@@ -20,13 +20,6 @@ a {
   color: inherit;
 }
 
-/* main {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 0 auto;
-} */
-
 .content{
   width: 100%;
   max-width: 1920px;
