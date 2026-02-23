@@ -8,10 +8,12 @@
 }
 
 #portfolio-container {
-  padding: 160px 100px;
-  position: relative;
-  z-index: 2;
-  margin: 0 auto;
+ padding: 160px 100px;
+    position: relative;
+    z-index: 2;
+    margin: 0 auto;
+    display: flex;
+    gap: 116px;
 }
 
 #portfolio-content {
@@ -22,12 +24,10 @@
   z-index: 3;
 }
 
-#portfolio-head {
+#portfolio-head span {
   color: white;
   font-size: 90px;
   font-weight: 700;
-  display: flex;
-  align-items: center;
 }
 
 #portfolio-seperator {

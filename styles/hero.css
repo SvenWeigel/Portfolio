@@ -62,7 +62,6 @@
   right: 0;
   margin: 0 auto;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
   gap: 0;
@@ -82,19 +81,12 @@
   gap: 42px;
 }
 
-#lets-talk-btn {
-  margin-bottom: 140px;
-}
-
 #scroll-down {
   writing-mode: vertical-lr;
-  transform: rotate(360deg);
   color: white;
   font-weight: 400;
   font-size: 23px;
-  z-index: 60;
   padding-right: 100px;
-  background: transparent;
   cursor: pointer;
 }
 
@@ -115,4 +107,8 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+#hero-scroll-div{
+  max-width: 1920px;
 }
