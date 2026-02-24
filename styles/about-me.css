@@ -50,3 +50,12 @@
   width: 100%;
 }
 
+.about-container-divs{
+  display: flex;
+  gap: 16px;
+}
+.about-me-div-size{
+  min-width: 48px;
+  min-height: 48px;
+  text-align: center;
+}
