@@ -1,0 +1,31 @@
+#footer-container {
+  height: 291px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 100px;
+}
+
+#footer-seperator {
+  width: 1920px;
+  height: 0;
+  border: none;
+  border-top: 4px solid #70e61c;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+footer span {
+  color: white;
+  font-size: 23px;
+  line-height: 120%;
+}
+
+#footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}

@@ -399,30 +399,79 @@
       <section id="contact">
         <div id="contact-content">
           <div class="content">
-            <div id="contact-container">
 
+            <div id="contact-header-container">
               <div id="contact-header">
                 <span>Contact</span>
                 <div id="contact-seperator"></div>
               </div>
+            </div>
 
-              <div id="contact-description">
-                <span>
-                  Interested in working together? Feel free to reach out!
-                </span>
+            <div id="contact-content-container">
+
+              <div id="contact-left-div">
+                
+                <div id="contact-left-content">
+                  <div id="contact-left-head">
+                    <div id="contact-left-seperator"></div>
+                    <span>Got a Problem to solve?</span>
+                  </div>
+                  <div id="contact-left-description">
+                    <span>
+                      Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.
+                    </span>
+                    <span>
+                      Need a Frontend developer? Contact me!
+                    </span>
+                  </div>
+                </div>
               </div>
 
-              <form id="contact-form" action="">
-                <input type="text" placeholder="Your Name" required />
-                <input type="email" placeholder="Your Email" required />
-                <textarea placeholder="Your Message" required></textarea>
-                <button class="general-btn" type="submit">Send Message</button>
-              </form>
-
+              <div id="contact-right-div">
+                <form id="contact-form" action="">
+                  <input id="name" type="text" placeholder="Your Name" required>
+                  <input id="email" type="email" placeholder="Your Email" required>
+                  <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                  <div id="contact-form-checkbox-bottom">
+                    <input type="checkbox" required> I agree to the terms and conditions
+                  </div>
+                </form>
+                  <div id="form-btn">
+                  <button id="form-btn" class="general-btn">Send message :)</button>
+                    </div>
+              </div>
             </div>
+
+            <div id="go-up-btn">
+             <a href="#"> <img src="assets/icons/go-up.svg" alt=""></a>
+            </div>
+          
+            
+
           </div>
         </div>
       </section>
-    <footer></footer>
+
+    <footer>
+      <div class="content">
+        <div id="footer-seperator"></div>
+        <div id="footer-container">
+
+          <div id="footer-left">
+            <span>Sven</span>
+            <a href="">Legal Notice</a>
+          </div>
+
+          <span>© Sven Weigel 2026</span>
+
+          <nav id="footer-nav">
+            <a href=""><img src="assets/icons/git-hub.svg" alt=""></a>
+            <a href=""><img src="assets/icons/email.svg" alt=""></a>
+            <a href=""><img src="assets/icons/linkedin.svg" alt=""></a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
   </body>
 </html>
