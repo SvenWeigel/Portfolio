@@ -20,7 +20,6 @@
 #skills-description {
   width: 492px;
   height: 560px;
-  margin-right: 0px;
 }
 
 #skills-icons {
@@ -58,6 +57,7 @@ filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%
   align-items: flex-start;
   color: white;
   font-size: 16px;
+  padding-top: 85px;
 }
 
 #skills-head {
@@ -90,4 +90,8 @@ filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%
 
 #btn-div{
     margin-top: 40px;
+}
+
+#other-skills-need p{
+  margin: 40px 0px 16px 0px;
 }
