@@ -3,6 +3,11 @@
   src: url(fonts/Roboto-VariableFont_wdth\,wght.ttf) format("truetype");
 }
 
+@font-face {
+  font-family: "Montserrat";
+  src: url(fonts/Montserrat/Montserrat-VariableFont_wght.ttf) format("truetype");
+}
+
 html,
 body {
   height: 100%;
