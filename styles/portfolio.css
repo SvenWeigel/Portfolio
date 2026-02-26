@@ -1,3 +1,7 @@
+#portfolio{
+  scroll-margin-top: 114px;
+}
+
 #portfolio-content {
   display: flex;
   flex-direction: row;

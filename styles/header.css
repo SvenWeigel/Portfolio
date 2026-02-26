@@ -4,7 +4,7 @@ header {
   justify-content: center;
 }
 
-#header-wrapper{
+#header-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,21 +23,31 @@ header {
   gap: 92px;
 }
 
-#header-nav{
-    font-size: 23px;
-    font-weight: 400;
-    display: flex;
-    gap: 29px;
+#header-nav {
+  font-size: 23px;
+  font-weight: 400;
+  display: flex;
+  gap: 29px;
 }
 
-#header-language{
-    display: flex;
-    gap: 14px;
+#header-language {
+  display: flex;
+  gap: 14px;
 }
 
 #header-language button {
-    background: transparent;
-    border: none;
-    padding: 0;
-    cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 9999;
+  background-color: rgb(20, 29, 47);
 }
