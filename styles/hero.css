@@ -104,10 +104,15 @@
 
 #hero {
   min-height: calc(100vh - 114px);
+  max-width: 1440px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url('../assets/imgs/purpel.png'), url('../assets/imgs/blue.png');
+  background-repeat: no-repeat;
+  background-position: center left -293px, center right ;
 }
 
 #hero-flex-div {
