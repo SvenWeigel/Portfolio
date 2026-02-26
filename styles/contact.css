@@ -1,5 +1,5 @@
 #contact-header-container {
-  padding: 100px 100px;
+  padding: 100px 0px 100px 0px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -38,7 +38,6 @@
 #contact-content-container{
     display: flex;
     justify-content: space-between;
-    padding: 0px 100px;
 }
 
 #contact-left-seperator{
@@ -173,4 +172,5 @@ textarea{
     justify-content: flex-end;
     padding-right: 100px;
     margin-bottom: 60px;
+    margin-top: 51px;
 }

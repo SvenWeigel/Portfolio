@@ -1,5 +1,5 @@
 #skills-container {
-  padding: 160px 100px;
+  padding: 160px 0px 160px 100px;
   display: flex;
   justify-content: space-between;
 }
@@ -57,7 +57,7 @@ filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%
   align-items: flex-start;
   color: white;
   font-size: 16px;
-  padding-top: 85px;
+  padding-top: 75px;
 }
 
 #skills-head {
@@ -95,4 +95,13 @@ filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%
 
 #other-skills-need p{
   margin: 40px 0px 16px 0px;
+}
+
+#highlight-description p{
+  margin: 0;
+  padding-right: 100px;
+}
+
+#skills-more-learnings p{
+  margin: 0;
 }
