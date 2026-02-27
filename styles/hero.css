@@ -110,7 +110,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url('../assets/imgs/purpel.png'), url('../assets/imgs/blue.png');
+  background-image: url('../assets/imgs/hero-purpel.png'), url('../assets/imgs/hero-blue.png');
   background-repeat: no-repeat;
   background-position: center left -293px, center right ;
 }

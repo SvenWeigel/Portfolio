@@ -65,4 +65,9 @@
   text-align: center;
 }
 
-
+#about-me-image-div{
+  background-image: url('../assets/imgs/about-me-purple-shadow.png'), url('../assets/imgs/about-me-green-shadow.png');
+  background-repeat: no-repeat;
+  background-position: bottom left -10px , bottom right -10px; ;
+  background-size: contain;
+}

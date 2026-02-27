@@ -9,7 +9,6 @@
       <stop offset="100%" stop-color="#4B2E8A" />
     </linearGradient>
   </defs>
-  <rect width="100%" height="100%" fill="url(#bg)" />
   <!-- shoulders / body -->
   <rect x="220" y="760" rx="60" ry="60" width="760" height="320" fill="#253746" opacity="0.95" />
   <!-- face -->
