@@ -71,3 +71,13 @@
   background-position: bottom left -10px , bottom right -10px; ;
   background-size: contain;
 }
+
+#about-me-connection-info img:hover{
+  transform: scale(1.5);
+  transition: transform 0.3s ease;
+}
+
+#about-me-image-div img:hover{
+  transform: scale(1.05);
+  transition: transform 0.5s ease-in-out;
+}

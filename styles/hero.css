@@ -119,3 +119,8 @@
   display: flex;
   justify-content: space-between;
 }
+
+#hero-social-links a:hover img{
+  transform: scale(1.5);
+  transition: transform 0.3s ease;
+}

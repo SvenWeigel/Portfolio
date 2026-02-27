@@ -105,3 +105,8 @@ filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%
 #skills-more-learnings p{
   margin: 0;
 }
+
+.hover-effect img:hover{
+  transform: scale(1.05) translateY(-50%);
+  transition: transform 0.3s ease;
+}

@@ -51,3 +51,7 @@ header {
   z-index: 9999;
   background-color: rgb(20, 29, 47);
 }
+
+#header-nav a:hover{
+  color: rgba(112, 230, 28, 1);
+}

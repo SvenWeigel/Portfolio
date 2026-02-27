@@ -40,3 +40,10 @@ a {
   font-size: 23px;
   cursor: pointer;
 }
+
+.general-btn:hover {
+  background-color: rgba(151, 71, 255, 1);
+  transition: ease, transform 0.2s ease;
+  transform: scale(1.2);
+  transform-origin: left top;
+}
