@@ -152,17 +152,45 @@ textarea{
     max-width: 100%;
     display: flex;
     align-items: center;
-    gap: 12px;
     color: white;
     box-sizing: border-box;
     margin-bottom: 37px;
 }
 
 #contact-form-checkbox-bottom input[type="checkbox"]{
-    margin: 0;
+    margin: 0 12px 0 0;
     width: auto;
     height: auto;
     padding: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid #70E61C;
+    border-radius: 4px;
+    background: transparent;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+#contact-form-checkbox-bottom input[type="checkbox"]:checked{
+    background: #70E61C;
+    border-color: #70E61C;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 12px 12px;
+}
+
+#contact-form-checkbox-bottom a{
+    color: #9747ff;
+    text-decoration: none;
+    padding: 5px;
+}
+
+#contact-form-checkbox-bottom a:hover{
+    text-decoration: underline;
 }
 
 #form-btn{
