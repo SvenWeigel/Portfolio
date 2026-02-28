@@ -146,6 +146,12 @@ textarea {
   background-color: rgb(20, 29, 47);
 }
 
+#contact-form textarea {
+  resize: vertical;
+  max-height: 400px;
+  min-height: 226px;
+}
+
 #contact-form-checkbox-bottom {
   align-self: flex-end;
   width: 617px;
