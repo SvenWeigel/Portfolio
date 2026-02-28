@@ -136,7 +136,7 @@ header {
   font-size: 61px;
   font-weight: 700;
   line-height: 120%;
-  color: white;
+  color: #70e61c;
 }
 #footer-container {
   height: 291px;
@@ -188,6 +188,7 @@ footer span {
   color: white;
   font-size: 16px;
   font-weight: 400;
+  padding-bottom: 50px;
 }
 
 #legal-main h1,
