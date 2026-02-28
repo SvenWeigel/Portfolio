@@ -101,6 +101,7 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+    height: 40px;
 }
 
 .point{
@@ -110,9 +111,24 @@
     background-color: #70E61C;
 }
 
+#arrow-back img,
+#arrow-next img {
+  border: 2px solid transparent;
+  border-radius: 50%;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
 #arrow-back{
     cursor: pointer;
     margin-right: 20px;
+}
+
+#arrow-back img:hover,
+#arrow-next img:hover{
+  border: #70E61C solid 2px;
+  border-radius: 50%;
+  padding: 5px;
 }
 
 #arrow-next{

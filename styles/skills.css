@@ -45,9 +45,9 @@
   padding: 16px 8px 16px 8px;
 }
 
-#lerning-icon{
-filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);
-;
+#lerning-icon {
+  filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg)
+    brightness(119%) contrast(119%);
 }
 
 #skills-description-content {
@@ -80,33 +80,33 @@ filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%
   margin-left: 32px;
 }
 
-#other-skills-need{
-    font-size: 32px;
-    font-weight: 700;
+#other-skills-need {
+  font-size: 32px;
+  font-weight: 700;
 }
 
 #other-skills-need span {
-    color:rgba(151, 71, 255, 1);
+  color: rgba(151, 71, 255, 1);
 }
 
-#btn-div{
-    margin-top: 40px;
+#btn-div {
+  margin-top: 40px;
 }
 
-#other-skills-need p{
+#other-skills-need p {
   margin: 40px 0px 16px 0px;
 }
 
-#highlight-description p{
+#highlight-description p {
   margin: 0;
   padding-right: 100px;
 }
 
-#skills-more-learnings p{
+#skills-more-learnings p {
   margin: 0;
 }
 
-.hover-effect img:hover{
+.hover-effect img:hover {
   transform: scale(1.05) translateY(-50%);
   transition: transform 0.3s ease;
 }

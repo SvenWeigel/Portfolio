@@ -29,3 +29,13 @@ footer span {
   flex-direction: column;
   gap: 5px;
 }
+
+#footer-nav{
+  display: flex;
+  gap: 42px;
+}
+
+#footer-nav a:hover img {
+  transform: scale(1.5);
+  transition: transform 0.3s ease;
+}

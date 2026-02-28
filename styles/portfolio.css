@@ -31,7 +31,7 @@
 
 #portfolio::after{
   background-image: url('../assets/imgs/portfolio-blue-shadow.png');
-  right: -50px;
+  right: 0;
   top: -210px;
   width: 800px;
   height: 800px;
