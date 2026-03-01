@@ -117,18 +117,15 @@ textarea {
   font-weight: 400;
 }
 
-input {
-  margin-bottom: 32px;
-}
-
-textarea {
-  margin-bottom: 16px;
+input:hover,
+textarea:hover {
+  border-color: #1ce6df;
+  transition: border-color 0.2s ease;
 }
 
 #contact-form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
   align-items: flex-end;
   width: 100%;
   box-sizing: border-box;
@@ -146,6 +143,32 @@ textarea {
   background-color: rgb(20, 29, 47);
 }
 
+#contact-form input.input-error,
+#contact-form textarea.input-error {
+  border-color: #ff4d4d !important;
+}
+
+#contact-form input.input-valid,
+#contact-form textarea.input-valid {
+  border-color: #70e61c !important;
+}
+
+#contact-form #error-name,
+#contact-form #error-email,
+#contact-form #error-message,
+#contact-form #error-checkbox {
+  align-self: flex-end;
+  width: 617px;
+  max-width: 100%;
+  color: #ff4d4d;
+  font-size: 12px;
+  height: 18px;
+  margin-top: 6px;
+  overflow: hidden;
+  text-align: left;
+  margin-bottom: 14px;
+}
+
 #contact-form textarea {
   resize: vertical;
   max-height: 400px;
@@ -160,7 +183,6 @@ textarea {
   align-items: center;
   color: white;
   box-sizing: border-box;
-  margin-bottom: 37px;
 }
 
 #contact-form-checkbox-bottom input[type="checkbox"] {
@@ -199,12 +221,23 @@ textarea {
   text-decoration: underline;
 }
 
-#form-btn {
+#form-btn-div {
   display: flex;
   justify-content: center;
 }
 
-.form-btn {
+.form-btn:disabled {
+  background-color: rgba(88, 88, 88, 0.876);
+  cursor: not-allowed;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 15px 30px;
+  font-size: 23px;
+  cursor: not-allowed;
+}
+
+.form-btn:enabled {
   background-color: rgba(112, 230, 28, 1);
   color: white;
   border: none;
@@ -214,7 +247,7 @@ textarea {
   cursor: pointer;
 }
 
-.form-btn:hover {
+.form-btn:enabled:hover {
   background-color: rgba(151, 71, 255, 1);
   transition:
     ease,
