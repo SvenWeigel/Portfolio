@@ -59,3 +59,16 @@ footer span {
 #footer-legal-link:hover::after{
   width: 50%;
 }
+
+@media (max-width: 800px) {
+  #footer-container {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  #footer-left {
+    align-items: center;
+  }
+}

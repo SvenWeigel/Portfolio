@@ -311,9 +311,12 @@
               </div>
             </div>
             <div id="reference-img">
+              <div id="reference-img-div">
               <img src="assets/imgs/fictional-person.svg" alt="">
-            </div>
-            <div id="reference-seperator"></div>
+              </div>
+              
+            </div><div id="reference-seperator"></div>
+            
           </div>
           <div id="commentary-nav-bar">
             <div id="arrow-back">
@@ -348,7 +351,7 @@
                 <span>Got a Problem to solve?</span>
               </div>
               <div id="contact-left-description">
-                <span>
+                <span id="contact-span">
                   Encourage people to contact you and describe what role you are interested in. Show that you will add
                   value to their projects through your work.
                 </span>
@@ -367,14 +370,18 @@
               <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
               <div id="error-message"></div>
               <div id="contact-form-checkbox-bottom">
-                <input id="checkbox" type="checkbox" required unchecked> I've read the <a href="legal-notice.html">Privacy Policy</a>
-                and agree to the processing of my data as outlined.
+                <input id="checkbox" type="checkbox" required unchecked>
+                <span id="checkbox-span-one">I've read the<a href="legal-notice.html">Privacy Policy</a>
+                and agree to the processing of my data as outlined.</span>
               </div>
               <div id="error-checkbox"></div>
-            </form>
-            <div id="form-btn-div">
-              <button onclick="sendContactForm()" id="form-btn" class="form-btn" disabled>Send message :)</button>
+              <div id="form-btn-div">
+              <button onclick="sendContactForm()" id="form-btn" class="form-btn" disabled>
+                Send message :)
+              </button>
             </div>
+            </form>
+            
           </div>
         </div>
         <div id="go-up-btn">
