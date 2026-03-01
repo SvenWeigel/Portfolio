@@ -33,6 +33,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  overflow: visible;
+  z-index: 0;
 }
 
 #about-me-left{
@@ -80,4 +83,19 @@
 #about-me-image-div img:hover{
   transform: scale(1.05);
   transition: transform 0.5s ease-in-out;
+}
+
+#about-me-container::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: -420px;
+  background-image: url('../assets/imgs/about-me-ramp.png');
+  background-position: bottom -400px center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+  pointer-events: none;
 }
