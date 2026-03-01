@@ -50,10 +50,6 @@
   justify-content: space-between;
 }
 
-#commentary {
-  max-width: 700px;
-}
-
 #commentary span {
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
@@ -140,6 +136,7 @@
   #reference-commentary {
     height: 272px;
     padding: 24px 48px 24px 48px;
+    margin: 0 8px;
   }
 }
 

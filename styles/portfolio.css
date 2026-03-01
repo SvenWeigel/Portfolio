@@ -1,17 +1,17 @@
-#portfolio{
+#portfolio {
   scroll-margin-top: 114px;
   max-width: 1440px;
   margin: 0 auto;
 }
 
-#portfolio{
+#portfolio {
   position: relative;
   z-index: 200;
   overflow: visible;
 }
 
 #portfolio::before,
-#portfolio::after{
+#portfolio::after {
   content: "";
   position: absolute;
   pointer-events: none;
@@ -19,8 +19,8 @@
   background-size: auto;
 }
 
-#portfolio::before{
-  background-image: url('../assets/imgs/portfolio-green-shadow.png');
+#portfolio::before {
+  background-image: url("../assets/imgs/portfolio-green-shadow.png");
   left: 0;
   bottom: -250px;
   width: 740px;
@@ -29,8 +29,8 @@
   z-index: 0;
 }
 
-#portfolio::after{
-  background-image: url('../assets/imgs/portfolio-blue-shadow.png');
+#portfolio::after {
+  background-image: url("../assets/imgs/portfolio-blue-shadow.png");
   right: 0;
   top: -210px;
   width: 800px;
@@ -46,8 +46,6 @@
   align-items: center;
   position: relative;
 }
-
-
 
 #portfolio-header-content {
   color: white;
@@ -65,7 +63,7 @@
   width: 68px;
   height: 0;
   border: none;
-  border-top: 4px solid #9747FF;
+  border-top: 4px solid #9747ff;
 }
 
 #portfolio-headline span {
@@ -80,37 +78,65 @@
   max-width: 473px;
   display: block;
   justify-content: end;
-
 }
 
 #portfolio-description {
   margin-left: calc(68px + 32px);
 }
 
-#portfolio-showcase{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 32px;
-    padding: 0px 93px 0px 93px;
-    position: relative;
+#portfolio-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  padding: 0px 93px 0px 93px;
+  position: relative;
+  z-index: 2;
+}
+
+.box {
+  border: 1px solid #70e61c;
+  border-radius: 15px;
+  position: relative;
+  background-color: rgb(20, 29, 47);
+}
+
+.box img {
+  display: block;
+  width: 100%;
+}
+
+.box img:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 1285px) {
+  #portfolio-content {
     z-index: 2;
-}
+  }
 
-.box{
-    border: 1px solid #70E61C;
-    border-radius: 15px;
-    position: relative;
-    background-color: rgb(20, 29, 47);
-}
+  #portfolio-headline span {
+    font-size:48px;
+    padding-right: 16px;
+  }
 
-.box img{
-    display: block;
-    width: 100%;
-}
+  #portfolio-description span {
+    font-size: 16px;
+  }
 
-.box img:hover{
-    transform: scale(1.2);
-    transition: transform 0.3s ease;
+  #portfolio-headline {
+    gap: 8px;
+  }
+
+  #portfolio-description {
+   margin: 0;
+   padding: 0px 8px;
+  }
+
+  #portfolio-showcase {
+    padding: 0px 16px 0px 16px;
+    gap: 16px;
+  }
 }
