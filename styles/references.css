@@ -15,7 +15,7 @@
 
 #reference-commentary {
   height: 272px;
-
+  max-width: 700px;
   padding: 48px 96px 48px 96px;
   border: 4px solid #9747ff;
   border-radius: 35px;
@@ -170,6 +170,7 @@
   #reference-commentary {
     grid-column: 1 / -1;
     grid-row: 2;
+    max-width: none;
   }
 }
 

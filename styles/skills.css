@@ -57,7 +57,6 @@
   align-items: flex-start;
   color: white;
   font-size: 16px;
-  padding-top: 75px;
 }
 
 #skills-head {
@@ -109,4 +108,121 @@
 .hover-effect img:hover {
   transform: scale(1.05) translateY(-50%);
   transition: transform 0.3s ease;
+}
+
+@media (max-width: 1285px) {
+  .hover-effect img:hover {
+    transform: none;
+    transition: none;
+  }
+
+  #skills-container {
+    padding: 60px 16px 120px 16px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "head"
+      "highlight"
+      "icons"
+      "other"
+      "more"
+      "btn";
+    align-items: center;
+    gap: 24px;
+  }
+
+  #skills-icons {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(120px, 1fr));
+    gap: 28px 20px;
+    grid-area: icons;
+  }
+
+  .skill-rows {
+    display: contents;
+  }
+
+  #skills-description {
+    display: contents;
+  }
+
+  #skills-description-content {
+    display: contents;
+  }
+
+  #skills-head {
+    grid-area: head;
+    font-size: 56px;
+    justify-content: flex-end;
+    text-align: right;
+  }
+
+  #skills-seperator {
+    width: 160px;
+    margin-left: 16px;
+  }
+
+  #highlight-description p {
+    padding-right: 0;
+  }
+
+  #highlight-description {
+    grid-area: highlight;
+    text-align: left;
+    width: min(520px, 100%);
+    justify-self: start;
+  }
+
+  #other-skills-need {
+    grid-area: other;
+    text-align: right;
+    justify-self: end;
+  }
+
+  #skills-more-learnings {
+    grid-area: more;
+    text-align: right;
+    justify-self: end;
+  }
+
+  #btn-div {
+    grid-area: btn;
+    justify-self: center;
+  }
+}
+
+@media (max-width: 900px) {
+  #skills-icons {
+    grid-template-columns: repeat(3, minmax(120px, 1fr));
+    gap: 24px 16px;
+  }
+
+  #skills-head {
+    font-size: 44px;
+  }
+
+  #other-skills-need {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  #skills-container {
+    padding: 40px 12px 80px 12px;
+  }
+
+  #skills-icons {
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    gap: 20px 12px;
+  }
+
+  #skills-head {
+    font-size: 36px;
+  }
+
+  .skill-icons-div {
+    font-size: 14px;
+  }
 }
