@@ -99,3 +99,22 @@
   z-index: -1;
   pointer-events: none;
 }
+
+@media (max-width: 1285px) {
+  #about-me-container{
+    flex-direction: column-reverse;
+    padding: 60px 16px 120px 16px;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  #about-me-header {
+    font-size: 48px;
+    text-align: center;
+  }
+
+  #about-me-introduce, #about-me-conection-info {
+    font-size: 16px;
+  } 
+}

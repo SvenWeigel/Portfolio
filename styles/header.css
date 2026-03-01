@@ -91,3 +91,9 @@ header {
 #header-nav a:hover {
   color: rgba(112, 230, 28, 1);
 }
+
+@media (max-width: 950px) {
+  header {
+    display: none;
+  }
+}
