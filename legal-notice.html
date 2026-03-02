@@ -10,9 +10,23 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="styles/legal-notice.css">
+    <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="styles/header.css" />
+  <link rel="stylesheet" href="styles/skills.css" />
+  <link rel="stylesheet" href="styles/references.css" />
+  <link rel="stylesheet" href="styles/portfolio.css" />
+  <link rel="stylesheet" href="styles/hero.css" />
+  <link rel="stylesheet" href="styles/contact.css" />
+  <link rel="stylesheet" href="styles/header.css" />
+  <link rel="stylesheet" href="styles/contact.css" />
+  <link rel="stylesheet" href="styles/footer.css" />
+  <link rel="stylesheet" href="styles/about-me.css" />
+  <script src="script.js"></script>
+  <script src="scripts/fetch.js"></script>
+  <script src="scripts/contact.js"></script>
   </head>
-  <body>
-    <header>
+  <body onload="init()">
+  <header>
     <div class="content">
 
 
@@ -20,6 +34,12 @@
         <div id="header-name">
           <a href="index.html#">Sven</a>
         </div>
+
+        <button id="header-burger" aria-expanded="false" aria-controls="header-nav-language-position">
+          <span class="sr-only">Menu</span>
+          <img src="assets/icons/burger-menu.svg" alt="Menu" />
+          <span class="burger-close" aria-hidden="true">X</span>
+        </button>
 
         <div id="header-nav-language-position">
           <nav id="header-nav">

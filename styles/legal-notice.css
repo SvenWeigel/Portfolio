@@ -162,7 +162,8 @@ header {
 }
 
 #legal-second-seperator {
-  width: 500px;
+  flex: 1 1 auto;
+  min-width: 0;
   height: 0;
   border: none;
   border-top: 4px solid #9747ff;
@@ -233,3 +234,19 @@ footer span {
 #legal-main h4 {
  color: #9747ff;
 }
+
+#legal-main{
+  padding: 16px;
+}
+
+@media(max-width: 1225px){
+  #legal-head h1 {
+    font-size: 32px;
+    padding-left: 16px;
+  }
+
+  #legal-first-seperator {
+    display: none;
+  }
+}
+  
