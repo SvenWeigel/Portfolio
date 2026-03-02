@@ -53,12 +53,15 @@ header {
   color: white;
 }
   
+.active {
+  background-color: rgba(112, 230, 28, 1) !important;
+  font-weight: 700 !important;
+}
 
-#de-language span {
+.de-language  {
   background-color: transparent;
   color: white;
-  background-color: rgba(112, 230, 28, 1);
-  font-weight: 700;
+  font-weight: 400;
 }
 
 #de-language span:hover {
@@ -67,7 +70,7 @@ header {
 }
 
 
-#en-language span {
+.en-language {
   background-color: transparent;
   color: white;
   font-weight: 400;

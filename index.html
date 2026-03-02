@@ -17,9 +17,7 @@
   <link rel="stylesheet" href="styles/contact.css" />
   <link rel="stylesheet" href="styles/footer.css" />
   <link rel="stylesheet" href="styles/about-me.css" />
-  <script src="script.js"></script>
   <script src="scripts/fetch.js"></script>
-  <script src="scripts/contact.js"></script>
 </head>
 <body onload="init()">
   <header>
@@ -39,16 +37,16 @@
 
         <div id="header-nav-language-position">
           <nav id="header-nav">
-            <a href="#about-me">About me</a>
+            <a id="about-me-a" href="#about-me">Über mich</a>
             <a href="#skills">Skills</a>
             <a href="#portfolio">Portfolio</a>
           </nav>
           <div id="header-language">
-            <button id="de-language">
-              <span>DE</span>
+            <button onclick="setDe()" id="de-language">
+              <span id="de-language-span" class="de-language active">DE</span>
             </button>
-            <button id="en-language">
-              <span>EN</span>
+            <button onclick="setEn()" id="en-language">
+              <span id="en-language-span" class="en-language">EN</span>
             </button>
           </div>
         </div>
@@ -118,15 +116,14 @@
 
           <div id="about-me-left">
             <div id="about-me-header">
-              <span>About Me</span>
+                <span id="about-me-title">Über mich</span>
             </div>
 
             <div id="about-me-introduce">
-              <span>
-                Hey there, I'm Simon!Write some information about yourself that is IT related. Why are you passionate
-                about coding? What is your source of inspiration for improving your programming skills?
+                <span id="about-me-intro">
+                Mit großer Leidenschaft für die Webentwicklung arbeite ich mit HTML, CSS, JavaScript, TypeScript und weiteren modernen Technologien. Programmieren begeistert mich, weil ich kreative Ideen in funktionierende, greifbare Projekte verwandeln kann. Besonders motiviert mich das kontinuierliche Lernen und die Herausforderung, mit jeder neuen Technologie fachlich und persönlich zu wachsen.
                 <span class="spacer-vertical"></span>
-                Let's connect and create something amazing together!
+                Lassen Sie uns vernetzen und gemeinsam innovative Lösungen entwickeln.
               </span>
             </div>
 
@@ -135,30 +132,24 @@
                 <div class="about-me-div-size">
                   <img src="assets/icons/location-icon.svg" alt="location icon" />
                 </div>
-                <span>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, fugit! Et quo consequuntur quas
-                  impedit id quaerat, adipisci aperiam ad quia fugiat voluptatem, non eius repudiandae amet,
-                  necessitatibus culpa quasi?
+                <span id="about-me-location-text">
+                  Mit Sitz in Dorsten bin ich offen für Remote-Arbeit und schätze flexible, moderne Zusammenarbeit. Clean Code, zeitgemäße Architekturen und strukturierte Prozesse sind für mich selbstverständlich. Motivation finde ich in kontinuierlicher Weiterentwicklung, Teamarbeit und dem Anspruch, hochwertige Lösungen zu schaffen.
                 </span>
               </div>
               <div class="about-container-divs">
                 <div class="about-me-div-size">
                   <img src="assets/icons/bulb-icon.svg" alt="open mind icon" />
                 </div>
-                <span>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, fugit! Et quo consequuntur quas
-                  impedit id quaerat, adipisci aperiam ad quia fugiat voluptatem, non eius repudiandae amet,
-                  necessitatibus culpa quasi?
+                <span id="about-me-openmind-text">
+                  Offenheit und Neugier treiben mich an. Ich probiere gerne neue Technologien aus, teste innovative Tools und erweitere kontinuierlich mein Wissen, um nutzerfreundliche und durchdachte User Experiences zu schaffen.
                 </span>
               </div>
               <div class="about-container-divs">
                 <div class="about-me-div-size">
                   <img src="assets/icons/puzzel-icon.svg" alt="puzzel icon" />
                 </div>
-                <span>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, fugit! Et quo consequuntur quas
-                  impedit id quaerat, adipisci aperiam ad quia fugiat voluptatem, non eius repudiandae amet,
-                  necessitatibus culpa quasi?
+                <span id="about-me-challenges-text">
+                  Herausforderungen sehe ich als Chance, über mich hinauszuwachsen. Mit analytischem Denken, Kreativität und Ausdauer entwickle ich effiziente, elegante und nachhaltige Lösungen und gewinne aus jedem Projekt wertvolle Erkenntnisse für zukünftige Aufgaben.
                 </span>
               </div>
             </div>
@@ -245,28 +236,21 @@
                 <div id="skills-seperator"></div>
               </div>
               <div id="highlight-description">
-                <p>
-                  I am a highly skilled frontend developer with expertise in
-                  HTML, CSS, JavaScript, and TypeScript. I have experience
-                  working with popular frameworks such as Angular and React, and
-                  I am proficient in using version control systems like Git. I
-                  am also familiar with backend technologies such as Firebase
-                  and RESTful APIs, allowing me to create seamless integrations
-                  between the frontend and backend of web applications.
+                <p id="skills-highlight-text">
+                  Ich habe in verschiedenen Projekten mit HTML, CSS, JavaScript und TypeScript gearbeitet und dabei praxisnahe Erfahrung gesammelt. Neue Tools und Frameworks sehe ich als Chance, mich weiterzuentwickeln. Kontinuierliches Lernen ist für mich selbstverständlich, um mit den dynamischen Veränderungen in der Webentwicklung Schritt zu halten.
                 </p>
               </div>
               <div id="other-skills-need">
-                <p>Looking for <span>another skill</span>?</p>
+                <p id="skills-other-question">Sie suchen nach <span id="skills-other-emphasis">anderen Fähigkeiten</span>?</p>
               </div>
               <div id="skills-more-learnings">
-                <p>
-                  Reveal enthusiasem for learning new technologies<br />
-                  and frameworks.
+                <p id="skills-more-learning">
+                  Ich brenne dafür, neue Technologien und Frameworks<br> kennenzulernen und einzusetzen.
                 </p>
               </div>
               <div id="btn-div">
                 <a href="#contact">
-                  <button class="general-btn">Get in touch</button>
+                  <button id="skills-contact-btn" class="general-btn">Kontaktieren</button>
                 </a>
               </div>
             </div>
@@ -285,8 +269,8 @@
                 <span>Portfolio</span>
               </div>
               <div id="portfolio-description">
-                <span>
-                  Explore a selection of my work here - Interact with projects to see my skills in action.
+                <span id="portfolio-description-text">
+                  Meine Projekte anklicken, testen, entdecken.
                 </span>
               </div>
 
@@ -310,14 +294,14 @@
           <div id="references-container">
             <div id="reference-commentary">
               <div id="commentary">
-                <span>
+                <span id="references-commentary-text">
                   das ist ein test was hier drin stehen könnte! mal sehen was hier so rein kommen wird und dann werden
                   wir sehen :)
                 </span>
               </div>
               <div id="commentary-name">
                 <div id="commentary-name-seperator"></div>
-                <span>M.Musterman-Team Partner</span>
+                <span id="references-commentary-name">M.Musterman-Team Partner</span>
               </div>
             </div>
             <div id="reference-img">
@@ -358,36 +342,34 @@
             <div id="contact-left-content">
               <div id="contact-left-head">
                 <div id="contact-left-seperator"></div>
-                <span>Got a Problem to solve?</span>
+                <span id="contact-challenge-text">Steht eine Herausforderung an?</span>
               </div>
               <div id="contact-left-description">
-                <span id="contact-span">
-                  Encourage people to contact you and describe what role you are interested in. Show that you will add
-                  value to their projects through your work.
+                <span id="contact-description-text">
+                  Lassen Sie uns in Kontakt treten und gemeinsam Ihre Ideen verwirklichen. Egal, ob Sie ein neues Projekt starten oder Unterstützung bei einer Herausforderung suchen, ich freue mich darauf, gemeinsam effiziente und kreative Lösungen zu entwickeln.
                 </span>
-                <span>
-                  Need a Frontend developer? Contact me!
+                <span id="contact-cta-text">
+                  Sie suchen einen Frontend-Entwickler? Kontaktieren Sie mich!
                 </span>
               </div>
             </div>
           </div>
           <div id="contact-right-div">
             <form id="contact-form" action="">
-              <input id="name" type="text" placeholder="Your Name" required>
+              <input id="name" type="text" placeholder="Ihr Name" required>
               <div id="error-name"></div>
-              <input id="email" type="email" placeholder="Your Email" required>
+              <input id="email" type="email" placeholder="Ihre E-Mail" required>
               <div id="error-email"></div>
-              <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+              <textarea name="message" id="message" cols="30" rows="10" placeholder="Ihre Nachricht" required></textarea>
               <div id="error-message"></div>
               <div id="contact-form-checkbox-bottom">
                 <input id="checkbox" type="checkbox" required unchecked>
-                <span id="checkbox-span-one">I've read the<a href="legal-notice.html">Privacy Policy</a>
-                and agree to the processing of my data as outlined.</span>
+                <span id="contact-privacy-text">Ich habe die<a id="contact-privacy-link" href="legal-notice.html">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.</span>
               </div>
               <div id="error-checkbox"></div>
               <div id="form-btn-div">
-              <button onclick="sendContactForm()" id="form-btn" class="form-btn" disabled>
-                Send message :)
+              <button onclick="sendContactForm()" id="contact-send-btn" class="form-btn" disabled>
+                Nachricht senden :)
               </button>
             </div>
             </form>
@@ -418,4 +400,9 @@
     </div>
   </footer>
 </body>
+
+<script src="script.js"></script>
+  
+  <script src="scripts/contact.js"></script>
+  <script src="scripts/language.js"></script>
 </html>
