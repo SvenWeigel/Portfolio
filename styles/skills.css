@@ -38,6 +38,8 @@
   text-align: center;
 }
 
+
+
 .skill-rows {
   display: flex;
   flex-direction: column;
@@ -227,4 +229,8 @@
   .skill-icons-div {
     font-size: 14px;
   }
+
+  .skills-icon{
+  width: 40px;
+}
 }
