@@ -125,6 +125,43 @@ textarea {
   font-weight: 400;
 }
 
+.field-with-icon {
+  position: relative;
+  width: 100%;
+  align-self: stretch;
+}
+
+.field-with-icon input,
+.field-with-icon textarea {
+  padding-right: 48px;
+}
+
+.validation-icon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.field-with-icon textarea ~ .validation-icon {
+  top: 24px;
+  transform: none;
+}
+
+.field-with-icon input.input-valid ~ .icon-valid,
+.field-with-icon textarea.input-valid ~ .icon-valid {
+  opacity: 1;
+}
+
+.field-with-icon input.input-error ~ .icon-invalid,
+.field-with-icon textarea.input-error ~ .icon-invalid {
+  opacity: 1;
+}
+
 input:hover,
 textarea:hover {
   border-color: #1ce6df;

@@ -87,6 +87,18 @@ function updateAllTexts(lang) {
 
   const contactSendBtn = document.getElementById("contact-send-btn");
   if (contactSendBtn) contactSendBtn.textContent = contactSendBtnTemplate(lang);
+
+  const contactNameInput = document.getElementById("name");
+  if (contactNameInput)
+    contactNameInput.placeholder = contactNamePlaceholderTemplate(lang);
+
+  const contactEmailInput = document.getElementById("email");
+  if (contactEmailInput)
+    contactEmailInput.placeholder = contactEmailPlaceholderTemplate(lang);
+
+  const contactMessageInput = document.getElementById("message");
+  if (contactMessageInput)
+    contactMessageInput.placeholder = contactMessagePlaceholderTemplate(lang);
 }
 
 function headerTemplate(lang) {
@@ -187,4 +199,16 @@ function contactPrivacyTemplate(lang) {
 
 function contactSendBtnTemplate(lang) {
   return lang === "de" ? "Nachricht senden :)" : "Send message :)";
+}
+
+function contactNamePlaceholderTemplate(lang) {
+  return lang === "de" ? "Ihr Name" : "Your name";
+}
+
+function contactEmailPlaceholderTemplate(lang) {
+  return lang === "de" ? "Ihre E-Mail" : "Your email";
+}
+
+function contactMessagePlaceholderTemplate(lang) {
+  return lang === "de" ? "Ihre Nachricht" : "Your message";
 }

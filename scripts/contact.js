@@ -89,7 +89,7 @@ function showCheckboxError() {
 }
 
 function updateButtonState() {
-  const btn = document.getElementById("form-btn");
+  const btn = document.getElementById("contact-send-btn");
   if (!btn) return;
   const nameOk = isNameValid();
   const emailOk = isEmailValid();
