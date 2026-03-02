@@ -23,8 +23,8 @@
   background-image: url("../assets/imgs/portfolio-green-shadow.png");
   left: 0;
   bottom: -250px;
-  width: 740px;
-  height: 740px;
+  width: min(740px, 100%);
+  height: min(740px, 100%);
   background-position: left bottom;
   z-index: 0;
 }
@@ -33,8 +33,8 @@
   background-image: url("../assets/imgs/portfolio-blue-shadow.png");
   right: 0;
   top: -210px;
-  width: 800px;
-  height: 800px;
+  width: min(800px, 100%);
+  height: min(800px, 100%);
   background-position: right top;
   z-index: 0;
 }

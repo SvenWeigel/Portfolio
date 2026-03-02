@@ -124,3 +124,13 @@
   transform: scale(1.5);
   transition: transform 0.3s ease;
 }
+
+@media(max-width: 500px){
+  #scroll-down-span{
+    display: none;
+  }
+
+  #scroll-down img{
+    display: none;
+  }
+}

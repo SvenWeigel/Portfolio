@@ -117,7 +117,7 @@
   }
 
   #skills-container {
-    padding: 60px 16px 120px 16px;
+    padding: 60px 0px 120px 16px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -179,12 +179,14 @@
     grid-area: other;
     text-align: right;
     justify-self: end;
+    padding-right: 16px;
   }
 
   #skills-more-learnings {
     grid-area: more;
     text-align: right;
     justify-self: end;
+    padding-right: 16px;
   }
 
   #btn-div {
@@ -210,7 +212,7 @@
 
 @media (max-width: 600px) {
   #skills-container {
-    padding: 40px 12px 80px 12px;
+    padding: 40px 0px 80px 12px;
   }
 
   #skills-icons {
