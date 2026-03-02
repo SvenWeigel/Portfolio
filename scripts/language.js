@@ -59,6 +59,54 @@ function updateAllTexts(lang) {
   if (portfolioDescription)
     portfolioDescription.textContent = portfolioDescriptionTemplate(lang);
 
+  const portfolioPolloTitle = document.getElementById("portfolio-pollo-title");
+  if (portfolioPolloTitle)
+    portfolioPolloTitle.textContent = portfolioPolloTitleTemplate(lang);
+
+  const portfolioPolloDesc = document.getElementById("portfolio-pollo-desc");
+  if (portfolioPolloDesc)
+    portfolioPolloDesc.textContent = portfolioPolloDescTemplate(lang);
+
+  const portfolioPolloLive = document.getElementById("portfolio-pollo-live");
+  if (portfolioPolloLive)
+    portfolioPolloLive.textContent = portfolioLiveBtnTemplate(lang);
+
+  const portfolioJoinTitle = document.getElementById("portfolio-join-title");
+  if (portfolioJoinTitle)
+    portfolioJoinTitle.textContent = portfolioJoinTitleTemplate(lang);
+
+  const portfolioJoinDesc = document.getElementById("portfolio-join-desc");
+  if (portfolioJoinDesc)
+    portfolioJoinDesc.textContent = portfolioJoinDescTemplate(lang);
+
+  const portfolioJoinLive = document.getElementById("portfolio-join-live");
+  if (portfolioJoinLive)
+    portfolioJoinLive.textContent = portfolioLiveBtnTemplate(lang);
+
+  const portfolioPokedexTitle = document.getElementById("portfolio-pokedex-title");
+  if (portfolioPokedexTitle)
+    portfolioPokedexTitle.textContent = portfolioPokedexTitleTemplate(lang);
+
+  const portfolioPokedexDesc = document.getElementById("portfolio-pokedex-desc");
+  if (portfolioPokedexDesc)
+    portfolioPokedexDesc.textContent = portfolioPokedexDescTemplate(lang);
+
+  const portfolioPokedexLive = document.getElementById("portfolio-pokedex-live");
+  if (portfolioPokedexLive)
+    portfolioPokedexLive.textContent = portfolioLiveBtnTemplate(lang);
+
+  const portfolioDabubbleTitle = document.getElementById("portfolio-dabubble-title");
+  if (portfolioDabubbleTitle)
+    portfolioDabubbleTitle.textContent = portfolioDabubbleTitleTemplate(lang);
+
+  const portfolioDabubbleDesc = document.getElementById("portfolio-dabubble-desc");
+  if (portfolioDabubbleDesc)
+    portfolioDabubbleDesc.textContent = portfolioDabubbleDescTemplate(lang);
+
+  const portfolioDabubbleLive = document.getElementById("portfolio-dabubble-live");
+  if (portfolioDabubbleLive)
+    portfolioDabubbleLive.textContent = portfolioLiveBtnTemplate(lang);
+
   const referencesCommentary = document.getElementById(
     "references-commentary-text",
   );
@@ -160,6 +208,54 @@ function portfolioDescriptionTemplate(lang) {
     ? "Meine Projekte anklicken, testen, entdecken."
     : "Click, test and explore my projects.";
 }
+
+function portfolioLiveBtnTemplate(lang) {
+  return lang === "de" ? "Live testen" : "Live test";
+}
+
+function portfolioPolloTitleTemplate(lang) {
+  return lang === "de" ? "El Pollo Loco" : "El Pollo Loco";
+}
+
+function portfolioPolloDescTemplate(lang) {
+  return lang === "de"
+    ? "Springe, renne und sammle Münzen in einem Browser-Game."
+    : "Jump, run and collect coins in a fun browser game.";
+}
+
+
+function portfolioJoinTitleTemplate(lang) {
+  return lang === "de" ? "Join" : "Join";
+}
+
+function portfolioJoinDescTemplate(lang) {
+  return lang === "de"
+    ? "Task-Manager im Kanban-Stil für Teams."
+    : "Task manager inspired by Kanban boards for teams.";
+}
+
+
+function portfolioPokedexTitleTemplate(lang) {
+  return lang === "de" ? "Pokedex" : "Pokedex";
+}
+
+function portfolioPokedexDescTemplate(lang) {
+  return lang === "de"
+    ? "Pokemon suchen und entdecken mit cleanem UI."
+    : "Search and explore Pokemon with clean UI.";
+}
+
+
+function portfolioDabubbleTitleTemplate(lang) {
+  return lang === "de" ? "DABubble" : "DABubble";
+}
+
+function portfolioDabubbleDescTemplate(lang) {
+  return lang === "de"
+    ? "Slack-inspirierte Chat-App mit Realtime Messaging."
+    : "Slack-inspired chat app with realtime messaging.";
+}
+
 
 function referencesCommentaryTemplate(lang) {
   return lang === "de"
