@@ -165,7 +165,7 @@
   }
 
   #highlight-description p {
-    padding-right: 0;
+    padding-right: 8px;
   }
 
   #highlight-description {
@@ -217,7 +217,7 @@
 
   #skills-icons {
     grid-template-columns: repeat(3, minmax(100px, 1fr));
-    gap: 20px 12px;
+    gap: 20px 0px;
   }
 
   #skills-head {
