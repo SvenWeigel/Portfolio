@@ -1,3 +1,26 @@
+function showModal(message) {
+  document.getElementById("modal-message").textContent = message;
+  document.getElementById("modal-overlay").classList.add("modal-open");
+}
+
+function closeModal() {
+  document.getElementById("modal-overlay").classList.remove("modal-open");
+}
+
+function resetForm() {
+  const form = document.getElementById("contact-form");
+  if (form) form.reset();
+  ["name", "email", "message"].forEach((id) => {
+    const el = document.getElementById(id);
+    if (el) el.classList.remove("input-valid", "input-error");
+    const err = document.getElementById("error-" + id);
+    if (err) err.textContent = "";
+  });
+  const errCb = document.getElementById("error-checkbox");
+  if (errCb) errCb.textContent = "";
+  updateButtonState();
+}
+
 function getFormValues() {
   return {
     name: (document.getElementById("name") || {}).value || "",
@@ -8,7 +31,7 @@ function getFormValues() {
 
 function validateFormValues({ name, email, message }) {
   if (!name.trim() || !email.trim() || !message.trim()) {
-    alert("Bitte alle Felder ausfüllen.");
+    showModal("Bitte alle Felder ausfüllen.");
     return false;
   }
   return true;
@@ -25,11 +48,10 @@ async function postContactForm({ name, email, message }) {
 async function handleResponse(res) {
   const data = await res.json().catch(() => null);
   if (res.ok && data && data.success) {
-    alert("Nachricht gesendet (Test).");
-    const form = document.getElementById("contact-form");
-    if (form) form.reset();
+    showModal("Nachricht wurde gesendet.");
+    resetForm();
   } else {
-    alert("Senden fehlgeschlagen: " + ((data && data.error) || res.statusText));
+    showModal("Deine Nachricht konnte nicht gesendet werden.");
   }
 }
 
@@ -42,7 +64,7 @@ async function sendContactForm() {
     const res = await postContactForm(values);
     await handleResponse(res);
   } catch (err) {
-    alert("Fehler beim Senden: " + err.message);
+    showModal("Deine Nachricht konnte nicht gesendet werden.");
   } finally {
     if (btn) btn.disabled = false;
   }

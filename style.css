@@ -47,3 +47,49 @@ a {
   transform: scale(1.2);
   transform-origin: left top;
 }
+
+#modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+
+#modal-overlay.modal-open {
+  display: flex;
+}
+
+#modal-box {
+  background-color: rgb(30, 42, 64);
+  border-radius: 14px;
+  padding: 48px 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  max-width: 480px;
+  width: 90%;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+  animation: modalIn 0.25s ease;
+}
+
+#modal-icon {
+  width: 56px;
+  height: 56px;
+}
+
+#modal-message {
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.85); }
+  to   { opacity: 1; transform: scale(1); }
+}

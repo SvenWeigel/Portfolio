@@ -408,7 +408,7 @@
               </div>
               <div id="error-checkbox"></div>
               <div id="form-btn-div">
-              <button onclick="sendContactForm()" id="contact-send-btn" class="form-btn" disabled>
+              <button type="button" onclick="sendContactForm()" id="contact-send-btn" class="form-btn" disabled>
                 Nachricht senden :)
               </button>
             </div>
@@ -438,6 +438,15 @@
       </div>
     </div>
   </footer>
+
+  <div id="modal-overlay" onclick="closeModal()">
+    <div id="modal-box">
+      <img id="modal-icon" src="assets/icons/modal-icon.svg" alt="">
+      <p id="modal-message"></p>
+      <button class="general-btn" onclick="closeModal()">OK</button>
+    </div>
+  </div>
+
 </body>
 <script src="script.js"></script>
   <script src="scripts/contact.js"></script>
