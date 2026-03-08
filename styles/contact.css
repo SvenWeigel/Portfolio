@@ -325,6 +325,7 @@ textarea:hover {
   z-index: 201;
   max-width: 1440px;
   margin: 0 auto;
+  scroll-margin-top: 15px;
 }
 
 #contact::before {
@@ -402,5 +403,15 @@ textarea:hover {
   #go-up-btn a img{
     z-index: 2;
     position: relative;
+  }
+}
+
+@media (max-width: 600px) {
+  #commentary span{
+    font-size: 16px;
+  }
+
+  #commentary-name span{
+    font-size: 16px;
   }
 }

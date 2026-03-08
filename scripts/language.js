@@ -15,128 +15,45 @@ function setDe() {
   updateAllTexts("de");
 }
 
+const TEXT_UPDATES = [
+  ["about-me-a", headerTemplate],
+  ["about-me-title", aboutMeTitleTemplate],
+  ["about-me-intro", aboutMeIntroTemplate],
+  ["about-me-location-text", aboutMeLocationTemplate],
+  ["about-me-openmind-text", aboutMeOpenmindTemplate],
+  ["about-me-challenges-text", aboutMeChallengesTemplate],
+  ["skills-highlight-text", skillsHighlightTemplate],
+  ["skills-other-question", skillsOtherQuestionTemplate, "innerHTML"],
+  ["skills-more-learning", skillsMoreLearningTemplate, "innerHTML"],
+  ["skills-contact-btn", skillsContactBtnTemplate],
+  ["portfolio-description-text", portfolioDescriptionTemplate],
+  ["portfolio-pollo-title", portfolioPolloTitleTemplate],
+  ["portfolio-pollo-desc", portfolioPolloDescTemplate],
+  ["portfolio-pollo-live", portfolioLiveBtnTemplate],
+  ["portfolio-join-title", portfolioJoinTitleTemplate],
+  ["portfolio-join-desc", portfolioJoinDescTemplate],
+  ["portfolio-join-live", portfolioLiveBtnTemplate],
+  ["portfolio-pokedex-title", portfolioPokedexTitleTemplate],
+  ["portfolio-pokedex-desc", portfolioPokedexDescTemplate],
+  ["portfolio-pokedex-live", portfolioLiveBtnTemplate],
+  ["portfolio-dabubble-title", portfolioDabubbleTitleTemplate],
+  ["portfolio-dabubble-desc", portfolioDabubbleDescTemplate],
+  ["portfolio-dabubble-live", portfolioLiveBtnTemplate],
+  ["contact-challenge-text", contactChallengeTemplate],
+  ["contact-description-text", contactDescriptionTemplate],
+  ["contact-cta-text", contactCtaTemplate],
+  ["contact-privacy-text", contactPrivacyTemplate, "innerHTML"],
+  ["contact-send-btn", contactSendBtnTemplate],
+  ["name", contactNamePlaceholderTemplate, "placeholder"],
+  ["email", contactEmailPlaceholderTemplate, "placeholder"],
+  ["message", contactMessagePlaceholderTemplate, "placeholder"],
+];
+
 function updateAllTexts(lang) {
-  const header = document.getElementById("about-me-a");
-  if (header) header.textContent = headerTemplate(lang);
-
-  const aboutMeTitle = document.getElementById("about-me-title");
-  if (aboutMeTitle) aboutMeTitle.textContent = aboutMeTitleTemplate(lang);
-
-  const aboutMeIntro = document.getElementById("about-me-intro");
-  if (aboutMeIntro) aboutMeIntro.textContent = aboutMeIntroTemplate(lang);
-
-  const aboutMeLocation = document.getElementById("about-me-location-text");
-  if (aboutMeLocation)
-    aboutMeLocation.textContent = aboutMeLocationTemplate(lang);
-
-  const aboutMeOpenmind = document.getElementById("about-me-openmind-text");
-  if (aboutMeOpenmind)
-    aboutMeOpenmind.textContent = aboutMeOpenmindTemplate(lang);
-
-  const aboutMeChallenges = document.getElementById("about-me-challenges-text");
-  if (aboutMeChallenges)
-    aboutMeChallenges.textContent = aboutMeChallengesTemplate(lang);
-
-  const skillsHighlight = document.getElementById("skills-highlight-text");
-  if (skillsHighlight)
-    skillsHighlight.textContent = skillsHighlightTemplate(lang);
-
-  const skillsOtherQuestion = document.getElementById("skills-other-question");
-  if (skillsOtherQuestion)
-    skillsOtherQuestion.innerHTML = skillsOtherQuestionTemplate(lang);
-
-  const skillsMoreLearning = document.getElementById("skills-more-learning");
-  if (skillsMoreLearning)
-    skillsMoreLearning.innerHTML = skillsMoreLearningTemplate(lang);
-
-  const skillsContactBtn = document.getElementById("skills-contact-btn");
-  if (skillsContactBtn)
-    skillsContactBtn.textContent = skillsContactBtnTemplate(lang);
-
-  const portfolioDescription = document.getElementById(
-    "portfolio-description-text",
-  );
-  if (portfolioDescription)
-    portfolioDescription.textContent = portfolioDescriptionTemplate(lang);
-
-  const portfolioPolloTitle = document.getElementById("portfolio-pollo-title");
-  if (portfolioPolloTitle)
-    portfolioPolloTitle.textContent = portfolioPolloTitleTemplate(lang);
-
-  const portfolioPolloDesc = document.getElementById("portfolio-pollo-desc");
-  if (portfolioPolloDesc)
-    portfolioPolloDesc.textContent = portfolioPolloDescTemplate(lang);
-
-  const portfolioPolloLive = document.getElementById("portfolio-pollo-live");
-  if (portfolioPolloLive)
-    portfolioPolloLive.textContent = portfolioLiveBtnTemplate(lang);
-
-  const portfolioJoinTitle = document.getElementById("portfolio-join-title");
-  if (portfolioJoinTitle)
-    portfolioJoinTitle.textContent = portfolioJoinTitleTemplate(lang);
-
-  const portfolioJoinDesc = document.getElementById("portfolio-join-desc");
-  if (portfolioJoinDesc)
-    portfolioJoinDesc.textContent = portfolioJoinDescTemplate(lang);
-
-  const portfolioJoinLive = document.getElementById("portfolio-join-live");
-  if (portfolioJoinLive)
-    portfolioJoinLive.textContent = portfolioLiveBtnTemplate(lang);
-
-  const portfolioPokedexTitle = document.getElementById("portfolio-pokedex-title");
-  if (portfolioPokedexTitle)
-    portfolioPokedexTitle.textContent = portfolioPokedexTitleTemplate(lang);
-
-  const portfolioPokedexDesc = document.getElementById("portfolio-pokedex-desc");
-  if (portfolioPokedexDesc)
-    portfolioPokedexDesc.textContent = portfolioPokedexDescTemplate(lang);
-
-  const portfolioPokedexLive = document.getElementById("portfolio-pokedex-live");
-  if (portfolioPokedexLive)
-    portfolioPokedexLive.textContent = portfolioLiveBtnTemplate(lang);
-
-  const portfolioDabubbleTitle = document.getElementById("portfolio-dabubble-title");
-  if (portfolioDabubbleTitle)
-    portfolioDabubbleTitle.textContent = portfolioDabubbleTitleTemplate(lang);
-
-  const portfolioDabubbleDesc = document.getElementById("portfolio-dabubble-desc");
-  if (portfolioDabubbleDesc)
-    portfolioDabubbleDesc.textContent = portfolioDabubbleDescTemplate(lang);
-
-  const portfolioDabubbleLive = document.getElementById("portfolio-dabubble-live");
-  if (portfolioDabubbleLive)
-    portfolioDabubbleLive.textContent = portfolioLiveBtnTemplate(lang);
-
-  const contactChallenge = document.getElementById("contact-challenge-text");
-  if (contactChallenge)
-    contactChallenge.textContent = contactChallengeTemplate(lang);
-
-  const contactDescription = document.getElementById(
-    "contact-description-text",
-  );
-  if (contactDescription)
-    contactDescription.textContent = contactDescriptionTemplate(lang);
-
-  const contactCta = document.getElementById("contact-cta-text");
-  if (contactCta) contactCta.textContent = contactCtaTemplate(lang);
-
-  const contactPrivacy = document.getElementById("contact-privacy-text");
-  if (contactPrivacy) contactPrivacy.innerHTML = contactPrivacyTemplate(lang);
-
-  const contactSendBtn = document.getElementById("contact-send-btn");
-  if (contactSendBtn) contactSendBtn.textContent = contactSendBtnTemplate(lang);
-
-  const contactNameInput = document.getElementById("name");
-  if (contactNameInput)
-    contactNameInput.placeholder = contactNamePlaceholderTemplate(lang);
-
-  const contactEmailInput = document.getElementById("email");
-  if (contactEmailInput)
-    contactEmailInput.placeholder = contactEmailPlaceholderTemplate(lang);
-
-  const contactMessageInput = document.getElementById("message");
-  if (contactMessageInput)
-    contactMessageInput.placeholder = contactMessagePlaceholderTemplate(lang);
+  TEXT_UPDATES.forEach(([id, fn, prop = "textContent"]) => {
+    const el = document.getElementById(id);
+    if (el) el[prop] = fn(lang);
+  });
 }
 
 function headerTemplate(lang) {
@@ -213,7 +130,6 @@ function portfolioPolloDescTemplate(lang) {
     : "Jump, run and collect coins in a fun browser game.";
 }
 
-
 function portfolioJoinTitleTemplate(lang) {
   return lang === "de" ? "Join" : "Join";
 }
@@ -224,7 +140,6 @@ function portfolioJoinDescTemplate(lang) {
     : "Task manager inspired by Kanban boards for teams.";
 }
 
-
 function portfolioPokedexTitleTemplate(lang) {
   return lang === "de" ? "Pokedex" : "Pokedex";
 }
@@ -234,7 +149,6 @@ function portfolioPokedexDescTemplate(lang) {
     ? "Pokemon suchen und entdecken mit cleanem UI."
     : "Search and explore Pokemon with clean UI.";
 }
-
 
 function portfolioDabubbleTitleTemplate(lang) {
   return lang === "de" ? "DABubble" : "DABubble";
