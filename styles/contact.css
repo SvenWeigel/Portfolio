@@ -250,6 +250,7 @@ textarea:hover {
   background: transparent;
   box-sizing: border-box;
   cursor: pointer;
+  padding-right: 15px;
 }
 
 #contact-form-checkbox-bottom input[type="checkbox"]:checked {

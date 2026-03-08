@@ -107,16 +107,6 @@ function updateAllTexts(lang) {
   if (portfolioDabubbleLive)
     portfolioDabubbleLive.textContent = portfolioLiveBtnTemplate(lang);
 
-  const referencesCommentary = document.getElementById(
-    "references-commentary-text",
-  );
-  if (referencesCommentary)
-    referencesCommentary.textContent = referencesCommentaryTemplate(lang);
-
-  const referencesName = document.getElementById("references-commentary-name");
-  if (referencesName)
-    referencesName.textContent = referencesCommentaryNameTemplate(lang);
-
   const contactChallenge = document.getElementById("contact-challenge-text");
   if (contactChallenge)
     contactChallenge.textContent = contactChallengeTemplate(lang);
@@ -254,19 +244,6 @@ function portfolioDabubbleDescTemplate(lang) {
   return lang === "de"
     ? "Slack-inspirierte Chat-App mit Realtime Messaging."
     : "Slack-inspired chat app with realtime messaging.";
-}
-
-
-function referencesCommentaryTemplate(lang) {
-  return lang === "de"
-    ? "das ist ein test was hier drin stehen könnte! mal sehen was hier so rein kommen wird und dann werden wir sehen :)"
-    : "This is a test for what could be written here. Let us see what will be added and how it will turn out :)";
-}
-
-function referencesCommentaryNameTemplate(lang) {
-  return lang === "de"
-    ? "M.Musterman-Team Partner"
-    : "M.Musterman - Team Partner";
 }
 
 function contactChallengeTemplate(lang) {
