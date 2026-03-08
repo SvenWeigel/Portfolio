@@ -19,11 +19,20 @@ const commentaryText = document.getElementById("references-commentary-text");
 const commentaryName = document.getElementById("references-commentary-name");
 const commentaryLeftBtn = document.getElementById("back");
 const commentaryRightBtn = document.getElementById("next");
+const commentaryPoints = document.querySelectorAll("#commentary-nav-bar .active-point, #commentary-nav-bar .point");
+
+function updateActivePoint() {
+    commentaryPoints.forEach((point, index) => {
+        point.classList.toggle("active-point", index === currentCommentary);
+        point.classList.toggle("point", index !== currentCommentary);
+    });
+}
 
 function switchCommentary(i){
 	currentCommentary = i;
     commentaryText.textContent = commentarys[currentCommentary].text;
     commentaryName.textContent = commentarys[currentCommentary].name;
+    updateActivePoint();
 }
 
 function nextCommentary(){
@@ -43,3 +52,5 @@ function backCommentary(){
     }
     switchCommentary(currentCommentary);
 }
+
+switchCommentary(currentCommentary);
