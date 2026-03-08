@@ -67,6 +67,10 @@ header {
   background-color: rgb(20, 29, 47);
 }
 
+.d-none {
+  display: none !important;
+} 
+
 #header-wrapper {
   display: flex;
   justify-content: space-between;
