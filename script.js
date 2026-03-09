@@ -3,6 +3,7 @@
  * @returns {void}
  */
 function init() {
+  if (typeof restoreLanguageFromLocalStorage === 'function') restoreLanguageFromLocalStorage();
   attachFieldListeners();
   updateButtonState();
   attachHeaderBurger();
@@ -48,6 +49,20 @@ function burgerClose(header, burger) {
   header.classList.remove("is-open");
   burger.setAttribute("aria-expanded", "false");
   document.body.classList.remove("no-scroll");
+}
+
+/**
+ * Restore language from localStorage and apply it.
+ * Minimal, failsafe: checks for setEn/setDe functions before calling.
+ * @returns {void}
+ */
+function restoreLanguageFromLocalStorage() {
+  try {
+    const l = localStorage.getItem('lang');
+    if (l === 'en' && typeof setEn === 'function') setEn();
+    else if (l === 'de' && typeof setDe === 'function') setDe();
+  } catch (e) {
+  }
 }
 
 

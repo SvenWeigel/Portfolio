@@ -190,4 +190,8 @@
     width: 200px;
     height: 200px;
   } 
+
+  #reference-commentary {
+    padding: 16px 24px 16px 24px;
+  }
 }

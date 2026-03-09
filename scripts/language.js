@@ -19,7 +19,12 @@ const enBtn = document.getElementById("en-language");
 function setEn() {
   deSpan.classList.remove("active");
   enSpan.classList.add("active");
+  document.body.classList.add('lang-en');
+  document.body.classList.remove('lang-de');
   updateAllTexts("en");
+  const iam = document.getElementById('i-am') || document.querySelector('.iam');
+  if (iam) iam.textContent = iAmTemplate('en');
+  try { localStorage.setItem('lang', 'en'); } catch (e) {}
 }
 
 /**
@@ -30,7 +35,12 @@ function setEn() {
 function setDe() {
   enSpan.classList.remove("active");
   deSpan.classList.add("active");
+  document.body.classList.add('lang-de');
+  document.body.classList.remove('lang-en');
   updateAllTexts("de");
+  const iam = document.getElementById('i-am') || document.querySelector('.iam');
+  if (iam) iam.textContent = iAmTemplate('de');
+  try { localStorage.setItem('lang', 'de'); } catch (e) {}
 }
 
 /**
@@ -40,6 +50,7 @@ function setDe() {
 
 const TEXT_UPDATES = [
   ["about-me-a", headerTemplate],
+  ["i-am", iAmTemplate],
   ["about-me-title", aboutMeTitleTemplate],
   ["about-me-intro", aboutMeIntroTemplate],
   ["about-me-location-text", aboutMeLocationTemplate],
@@ -62,6 +73,7 @@ const TEXT_UPDATES = [
   ["portfolio-dabubble-title", portfolioDabubbleTitleTemplate],
   ["portfolio-dabubble-desc", portfolioDabubbleDescTemplate],
   ["portfolio-dabubble-live", portfolioLiveBtnTemplate],
+  ["hero-job", heroJobTemplate],
   ["contact-challenge-text", contactChallengeTemplate],
   ["contact-description-text", contactDescriptionTemplate],
   ["contact-cta-text", contactCtaTemplate],
@@ -97,6 +109,24 @@ function headerTemplate(lang) {
 
 function aboutMeTitleTemplate(lang) {
   return lang === "de" ? "Über mich" : "About me";
+}
+
+/**
+ * Template for the short 'I am' label in the hero section.
+ * @param {'de'|'en'} lang
+ * @returns {string}
+ */
+function iAmTemplate(lang) {
+  return lang === "de" ? "Ich bin" : "I am";
+}
+
+/**
+ * Template for the hero job title text.
+ * @param {'de'|'en'} lang
+ * @returns {string}
+ */
+function heroJobTemplate(lang) {
+  return lang === "de" ? "FRONTEND ENTWICKLER" : "FRONTEND DEVELOPER";
 }
 
 /**
