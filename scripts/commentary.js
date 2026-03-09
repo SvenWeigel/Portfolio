@@ -28,12 +28,23 @@ function updateActivePoint() {
     });
 }
 
+/**
+ * Update the visual indicator for the currently active commentary point.
+ * @returns {void}
+ */
+
 function switchCommentary(i){
 	currentCommentary = i;
     commentaryText.textContent = commentarys[currentCommentary].text;
     commentaryName.textContent = commentarys[currentCommentary].name;
     updateActivePoint();
 }
+
+/**
+ * Switch to a specific commentary by index and update DOM.
+ * @param {number} i - Index of the commentary to show.
+ * @returns {void}
+ */
 
 function nextCommentary(){
     if(currentCommentary < commentarys.length - 1){
@@ -44,6 +55,11 @@ function nextCommentary(){
     switchCommentary(currentCommentary);
 }
 
+/**
+ * Advance to the next commentary, wrapping to the start when reaching the end.
+ * @returns {void}
+ */
+
 function backCommentary(){
     if(currentCommentary > 0){
         currentCommentary--;
@@ -52,5 +68,10 @@ function backCommentary(){
     }
     switchCommentary(currentCommentary);
 }
+
+/**
+ * Go back to the previous commentary, wrapping to the last when at the start.
+ * @returns {void}
+ */
 
 switchCommentary(currentCommentary);

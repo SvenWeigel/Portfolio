@@ -1,6 +1,19 @@
+/**
+ * Language switch span and button elements (may be null during script load).
+ * @type {HTMLElement|null}
+ */
 const deSpan = document.getElementById("de-language-span");
+/**
+ * @type {HTMLElement|null}
+ */
 const enSpan = document.getElementById("en-language-span");
+/**
+ * @type {HTMLElement|null}
+ */
 const deBtn = document.getElementById("de-language");
+/**
+ * @type {HTMLElement|null}
+ */
 const enBtn = document.getElementById("en-language");
 
 function setEn() {
@@ -9,11 +22,21 @@ function setEn() {
   updateAllTexts("en");
 }
 
+/**
+ * Switch UI to English and update visible texts.
+ * @returns {void}
+ */
+
 function setDe() {
   enSpan.classList.remove("active");
   deSpan.classList.add("active");
   updateAllTexts("de");
 }
+
+/**
+ * Switch UI to German and update visible texts.
+ * @returns {void}
+ */
 
 const TEXT_UPDATES = [
   ["about-me-a", headerTemplate],
@@ -56,13 +79,31 @@ function updateAllTexts(lang) {
   });
 }
 
+/**
+ * Update all mapped text nodes or attributes with the given language.
+ * @param {'de'|'en'} lang - Language code to apply.
+ * @returns {void}
+ */
+
 function headerTemplate(lang) {
   return lang === "de" ? "Über mich" : "About me";
 }
 
+/**
+ * Template for header text.
+ * @param {'de'|'en'} lang
+ * @returns {string}
+ */
+
 function aboutMeTitleTemplate(lang) {
   return lang === "de" ? "Über mich" : "About me";
 }
+
+/**
+ * Template for about-me title.
+ * @param {'de'|'en'} lang
+ * @returns {string}
+ */
 
 function aboutMeIntroTemplate(lang) {
   return lang === "de"
@@ -70,11 +111,23 @@ function aboutMeIntroTemplate(lang) {
     : "With great passion for web development, I work with HTML, CSS, JavaScript, TypeScript and other modern technologies. Programming excites me because I can turn creative ideas into working, tangible projects. What motivates me most is continuous learning and the challenge of growing professionally and personally with every new technology. Let us connect and build innovative solutions together.";
 }
 
+/**
+ * Template for about-me intro paragraph.
+ * @param {'de'|'en'} lang
+ * @returns {string}
+ */
+
 function aboutMeLocationTemplate(lang) {
   return lang === "de"
     ? "Mit Sitz in Dorsten bin ich offen für Remote-Arbeit und schätze flexible, moderne Zusammenarbeit. Clean Code, zeitgemäße Architekturen und strukturierte Prozesse sind für mich selbstverständlich. Motivation finde ich in kontinuierlicher Weiterentwicklung, Teamarbeit und dem Anspruch, hochwertige Lösungen zu schaffen."
     : "Based in Dorsten, I am open to remote work and value flexible, modern collaboration. Clean code, contemporary architectures and structured processes are a given for me. I find motivation in continuous improvement, teamwork and the ambition to deliver high-quality solutions.";
 }
+
+/**
+ * Template for about-me location paragraph.
+ * @param {'de'|'en'} lang
+ * @returns {string}
+ */
 
 function aboutMeOpenmindTemplate(lang) {
   return lang === "de"
@@ -82,11 +135,23 @@ function aboutMeOpenmindTemplate(lang) {
     : "Openness and curiosity drive me. I enjoy trying new technologies, testing innovative tools and continuously expanding my knowledge to create user-friendly and well-thought-out experiences.";
 }
 
+/**
+ * Template for about-me openmind paragraph.
+ * @param {'de'|'en'} lang
+ * @returns {string}
+ */
+
 function aboutMeChallengesTemplate(lang) {
   return lang === "de"
     ? "Herausforderungen sehe ich als Chance, über mich hinauszuwachsen. Mit analytischem Denken, Kreativität und Ausdauer entwickle ich effiziente, elegante und nachhaltige Lösungen und gewinne aus jedem Projekt wertvolle Erkenntnisse für zukünftige Aufgaben."
     : "I see challenges as an opportunity to grow beyond myself. With analytical thinking, creativity and perseverance, I develop efficient, elegant and sustainable solutions and gain valuable insights from every project for future tasks.";
 }
+
+/**
+ * Template for about-me challenges paragraph.
+ * @param {'de'|'en'} lang
+ * @returns {string}
+ */
 
 function skillsHighlightTemplate(lang) {
   return lang === "de"
@@ -94,11 +159,23 @@ function skillsHighlightTemplate(lang) {
     : "I have worked on various projects with HTML, CSS, JavaScript and TypeScript, gaining hands-on experience. I see new tools and frameworks as an opportunity to grow. Continuous learning is essential for me to keep up with the dynamic changes in web development.";
 }
 
+/**
+ * Template for skills highlight text.
+ * @param {'de'|'en'} lang
+ * @returns {string}
+ */
+
 function skillsOtherQuestionTemplate(lang) {
   return lang === "de"
     ? 'Sie suchen nach <span id="skills-other-emphasis">anderen Fähigkeiten</span> ?'
     : 'Are you looking for <span id="skills-other-emphasis">other skills</span> ?';
 }
+
+/**
+ * Template for the 'other skills' question (can contain HTML).
+ * @param {'de'|'en'} lang
+ * @returns {string}
+ */
 
 function skillsMoreLearningTemplate(lang) {
   return lang === "de"
@@ -106,9 +183,21 @@ function skillsMoreLearningTemplate(lang) {
     : "I am passionate about learning and using new technologies and frameworks.";
 }
 
+/**
+ * Template for skills 'more learning' text (may contain HTML).
+ * @param {'de'|'en'} lang
+ * @returns {string}
+ */
+
 function skillsContactBtnTemplate(lang) {
   return lang === "de" ? "Kontaktieren" : "Contact";
 }
+
+/**
+ * Template for the contact button label.
+ * @param {'de'|'en'} lang
+ * @returns {string}
+ */
 
 function portfolioDescriptionTemplate(lang) {
   return lang === "de"
@@ -116,13 +205,31 @@ function portfolioDescriptionTemplate(lang) {
     : "Click, test and explore my projects.";
 }
 
+/**
+ * Template for portfolio description.
+ * @param {'de'|'en'} lang
+ * @returns {string}
+ */
+
 function portfolioLiveBtnTemplate(lang) {
   return lang === "de" ? "Live testen" : "Live test";
 }
 
+/**
+ * Template for portfolio live button label.
+ * @param {'de'|'en'} lang
+ * @returns {string}
+ */
+
 function portfolioPolloTitleTemplate(lang) {
   return lang === "de" ? "El Pollo Loco" : "El Pollo Loco";
 }
+
+/**
+ * Template for El Pollo Loco title.
+ * @param {'de'|'en'} lang
+ * @returns {string}
+ */
 
 function portfolioPolloDescTemplate(lang) {
   return lang === "de"
@@ -130,9 +237,21 @@ function portfolioPolloDescTemplate(lang) {
     : "Jump, run and collect coins in a fun browser game.";
 }
 
+/**
+ * Template for El Pollo Loco description.
+ * @param {'de'|'en'} lang
+ * @returns {string}
+ */
+
 function portfolioJoinTitleTemplate(lang) {
   return lang === "de" ? "Join" : "Join";
 }
+
+/**
+ * Template for Join project title.
+ * @param {'de'|'en'} lang
+ * @returns {string}
+ */
 
 function portfolioJoinDescTemplate(lang) {
   return lang === "de"
@@ -140,9 +259,21 @@ function portfolioJoinDescTemplate(lang) {
     : "Task manager inspired by Kanban boards for teams.";
 }
 
+/**
+ * Template for Join project description.
+ * @param {'de'|'en'} lang
+ * @returns {string}
+ */
+
 function portfolioPokedexTitleTemplate(lang) {
   return lang === "de" ? "Pokedex" : "Pokedex";
 }
+
+/**
+ * Template for Pokedex project title.
+ * @param {'de'|'en'} lang
+ * @returns {string}
+ */
 
 function portfolioPokedexDescTemplate(lang) {
   return lang === "de"
@@ -150,9 +281,21 @@ function portfolioPokedexDescTemplate(lang) {
     : "Search and explore Pokemon with clean UI.";
 }
 
+/**
+ * Template for Pokedex project description.
+ * @param {'de'|'en'} lang
+ * @returns {string}
+ */
+
 function portfolioDabubbleTitleTemplate(lang) {
   return lang === "de" ? "DABubble" : "DABubble";
 }
+
+/**
+ * Template for DABubble project title.
+ * @param {'de'|'en'} lang
+ * @returns {string}
+ */
 
 function portfolioDabubbleDescTemplate(lang) {
   return lang === "de"
@@ -160,11 +303,23 @@ function portfolioDabubbleDescTemplate(lang) {
     : "Slack-inspired chat app with realtime messaging.";
 }
 
+/**
+ * Template for DABubble project description.
+ * @param {'de'|'en'} lang
+ * @returns {string}
+ */
+
 function contactChallengeTemplate(lang) {
   return lang === "de"
     ? "Steht eine Herausforderung an?"
     : "Facing a challenge?";
 }
+
+/**
+ * Template for contact challenge headline.
+ * @param {'de'|'en'} lang
+ * @returns {string}
+ */
 
 function contactDescriptionTemplate(lang) {
   return lang === "de"
@@ -172,11 +327,23 @@ function contactDescriptionTemplate(lang) {
     : "Let us get in touch and bring your ideas to life. Whether you are starting a new project or need support with a challenge, I look forward to developing efficient and creative solutions together.";
 }
 
+/**
+ * Template for contact description paragraph.
+ * @param {'de'|'en'} lang
+ * @returns {string}
+ */
+
 function contactCtaTemplate(lang) {
   return lang === "de"
     ? "Sie suchen einen Frontend-Entwickler? Kontaktieren Sie mich!"
     : "Looking for a frontend developer? Contact me!";
 }
+
+/**
+ * Template for contact call-to-action text.
+ * @param {'de'|'en'} lang
+ * @returns {string}
+ */
 
 function contactPrivacyTemplate(lang) {
   return lang === "de"
@@ -184,18 +351,48 @@ function contactPrivacyTemplate(lang) {
     : 'I have read the <a id="contact-privacy-link" href="legal-notice.html">Privacy Policy</a> and agree to the processing of my data as described.';
 }
 
+/**
+ * Template for contact privacy text (contains link HTML).
+ * @param {'de'|'en'} lang
+ * @returns {string}
+ */
+
 function contactSendBtnTemplate(lang) {
   return lang === "de" ? "Nachricht senden :)" : "Send message :)";
 }
+
+/**
+ * Template for send button label.
+ * @param {'de'|'en'} lang
+ * @returns {string}
+ */
 
 function contactNamePlaceholderTemplate(lang) {
   return lang === "de" ? "Ihr Name" : "Your name";
 }
 
+/**
+ * Template for name input placeholder.
+ * @param {'de'|'en'} lang
+ * @returns {string}
+ */
+
 function contactEmailPlaceholderTemplate(lang) {
   return lang === "de" ? "Ihre E-Mail" : "Your email";
 }
 
+/**
+ * Template for email input placeholder.
+ * @param {'de'|'en'} lang
+ * @returns {string}
+ */
+
 function contactMessagePlaceholderTemplate(lang) {
   return lang === "de" ? "Ihre Nachricht" : "Your message";
 }
+
+/**
+ * Template for message textarea placeholder.
+ * @param {'de'|'en'} lang
+ * @returns {string}
+ */
