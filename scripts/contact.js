@@ -88,6 +88,13 @@ function showCheckboxError() {
   return ok;
 }
 
+function updateFieldState(id, ok) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.classList.toggle("input-valid", ok);
+  if (ok) el.classList.remove("input-error");
+}
+
 function updateButtonState() {
   const btn = document.getElementById("contact-send-btn");
   if (!btn) return;
@@ -96,22 +103,30 @@ function updateButtonState() {
   const msgOk = isMessageValid();
   const cbOk = isCheckboxValid();
   const valid = nameOk && emailOk && msgOk && cbOk;
-  const nameEl = document.getElementById("name");
-  if (nameEl) {
-    nameEl.classList.toggle("input-valid", nameOk);
-    if (nameOk) nameEl.classList.remove("input-error");
-  }
-  const emailEl = document.getElementById("email");
-  if (emailEl) {
-    emailEl.classList.toggle("input-valid", emailOk);
-    if (emailOk) emailEl.classList.remove("input-error");
-  }
-  const msgEl = document.getElementById("message");
-  if (msgEl) {
-    msgEl.classList.toggle("input-valid", msgOk);
-    if (msgOk) msgEl.classList.remove("input-error");
-  }
+  updateFieldState("name", nameOk);
+  updateFieldState("email", emailOk);
+  updateFieldState("message", msgOk);
   btn.disabled = !valid;
+}
+
+function handleFieldBlur(id) {
+  if (id === "name") showNameError();
+  if (id === "email") showEmailError();
+  if (id === "message") showMessageError();
+  updateButtonState();
+}
+
+function handleFieldFocus(id) {
+  const err = document.getElementById("error-" + id);
+  if (err) err.textContent = "";
+}
+
+function handleCheckboxChange(cb) {
+  updateButtonState();
+  if (cb.checked) {
+    const err = document.getElementById("error-checkbox");
+    if (err) err.textContent = "";
+  }
 }
 
 function attachFieldListeners() {
@@ -119,27 +134,13 @@ function attachFieldListeners() {
   fields.forEach((id) => {
     const el = document.getElementById(id);
     if (!el) return;
-    el.addEventListener("blur", () => {
-      if (id === "name") showNameError();
-      if (id === "email") showEmailError();
-      if (id === "message") showMessageError();
-      updateButtonState();
-    });
-    el.addEventListener("focus", () => {
-      const err = document.getElementById("error-" + id);
-      if (err) err.textContent = "";
-    });
+    el.addEventListener("blur", () => handleFieldBlur(id));
+    el.addEventListener("focus", () => handleFieldFocus(id));
     el.addEventListener("input", updateButtonState);
   });
   const cb = document.getElementById("checkbox");
   if (cb) {
-    cb.addEventListener("change", () => {
-      updateButtonState();
-      if (cb.checked) {
-        const err = document.getElementById("error-checkbox");
-        if (err) err.textContent = "";
-      }
-    });
+    cb.addEventListener("change", () => handleCheckboxChange(cb));
     cb.addEventListener("blur", showCheckboxError);
   }
 }
