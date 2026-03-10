@@ -1,4 +1,4 @@
-#about-me{
+#about-me {
   margin-top: 100px;
   scroll-margin-top: 30px;
 }
@@ -10,7 +10,7 @@
   line-height: 120%;
 }
 
-#about-me-content-wrapper{
+#about-me-content-wrapper {
   display: flex;
   justify-content: center;
 }
@@ -29,7 +29,7 @@
   gap: 20px;
 }
 
-#about-me-container{
+#about-me-container {
   padding: 100px 100px;
   display: flex;
   justify-content: space-between;
@@ -39,7 +39,7 @@
   z-index: 0;
 }
 
-#about-me-left{
+#about-me-left {
   color: white;
 }
 
@@ -49,52 +49,58 @@
   width: 100%;
 }
 
-#about-me-right{
-  max-width: 471px;
-  max-height: 471px;
+#about-me-right {
+  max-width: 552px;
+  max-height: 552px;
+  margin-top: 227px;
+  z-index: -2;
 }
 
-#about-me-right img{
+#about-me-right img {
   display: block;
   width: 100%;
 }
 
-.about-container-divs{
+.about-container-divs {
   display: flex;
   gap: 16px;
 }
-.about-me-div-size{
+.about-me-div-size {
   min-width: 48px;
   min-height: 48px;
   text-align: center;
 }
 
-#about-me-image-div{
-  background-image: url('../assets/imgs/about-me-purple-shadow.png'), url('../assets/imgs/about-me-green-shadow.png');
+#about-me-image-div {
+  background-image:
+    url("../assets/imgs/about-me-purple-shadow.png"),
+    url("../assets/imgs/about-me-green-shadow.png");
   background-repeat: no-repeat;
-  background-position: bottom left -10px , bottom right -10px; ;
+  background-position:
+    bottom left -10px,
+    bottom right -10px;
   background-size: contain;
 }
 
-#about-me-connection-info img:hover{
+#about-me-connection-info img:hover {
   transform: scale(1.5);
   transition: transform 0.3s ease;
 }
 
-#about-me-image-div img:hover{
+#about-me-image-div img:hover {
   transform: scale(1.05);
   transition: transform 0.5s ease-in-out;
 }
 
-#about-me-container::after{
+#about-me-container::after {
   content: "";
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
   bottom: -420px;
-  background-image: url('../assets/imgs/about-me-ramp.png');
-  background-position: bottom -400px center;
+  background-image: url("../assets/imgs/about-me-ramp.png");
+  background-position: bottom -715px center;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
@@ -102,10 +108,18 @@
 }
 
 @media (max-width: 1285px) {
-  #about-me-container{
+  #about-me-container {
     flex-direction: column-reverse;
     padding: 60px 16px 120px 16px;
     gap: 40px;
+  }
+
+  #about-me-right {
+    margin-top: 0;
+  }
+
+  #about-me-container::after {
+    background-position: bottom -216px center;
   }
 }
 
@@ -115,7 +129,152 @@
     text-align: center;
   }
 
-  #about-me-introduce, #about-me-conection-info {
+  #about-me-introduce,
+  #about-me-conection-info {
     font-size: 16px;
-  } 
+  }
+}
+
+@media (max-width: 575px) {
+  #about-me-container::after {
+    background-position: bottom -195px center;
+  }
+}
+
+@media (max-width: 545px) {
+  #about-me-container::after {
+    background-position: bottom -195px center;
+  }
+}
+
+@media (max-width: 535px) {
+  #about-me-container::after {
+    background-position: bottom -183px center;
+  }
+}
+
+@media (max-width: 525px) {
+  #about-me-container::after {
+    background-position: bottom -170px center;
+  }
+}
+
+@media (max-width: 515px) {
+  #about-me-container::after {
+    background-position: bottom -155px center;
+  }
+}
+
+@media (max-width: 505px) {
+  #about-me-container::after {
+    background-position: bottom -140px center;
+  }
+}
+
+@media (max-width: 495px) {
+  #about-me-container::after {
+    background-position: bottom -128px center;
+  }
+}
+
+@media (max-width: 485px) {
+  #about-me-container::after {
+    background-position: bottom -115px center;
+  }
+}
+
+@media (max-width: 475px) {
+  #about-me-container::after {
+    background-position: bottom -100px center;
+  }
+}
+
+@media (max-width: 465px) {
+  #about-me-container::after {
+    background-position: bottom -85px center;
+  }
+}
+
+@media (max-width: 455px) {
+  #about-me-container::after {
+    background-position: bottom -73px center;
+  }
+}
+
+@media (max-width: 445px) {
+  #about-me-container::after {
+    background-position: bottom -60px center;
+  }
+}
+
+@media (max-width: 435px) {
+  #about-me-container::after {
+    background-position: bottom -45px center;
+  }
+}
+
+@media (max-width: 425px) {
+  #about-me-container::after {
+    background-position: bottom -30px center;
+  }
+}
+
+@media (max-width: 415px) {
+  #about-me-container::after {
+    background-position: bottom -18px center;
+  }
+}
+
+@media (max-width: 405px) {
+  #about-me-container::after {
+    background-position: bottom -5px center;
+  }
+}
+
+@media (max-width: 395px) {
+  #about-me-container::after {
+    background-position: bottom 10px center;
+  }
+}
+
+@media (max-width: 385px) {
+  #about-me-container::after {
+    background-position: bottom 25px center;
+  }
+}
+
+@media (max-width: 375px) {
+  #about-me-container::after {
+    background-position: bottom 38px center;
+  }
+}
+
+@media (max-width: 365px) {
+  #about-me-container::after {
+    background-position: bottom 50px center;
+  }
+}
+
+@media (max-width: 355px) {
+  #about-me-container::after {
+    background-position: bottom 65px center;
+  }
+}
+
+@media (max-width: 345px) {
+  #about-me-container::after {
+    background-position: bottom 80px center;
+  }
+}
+
+@media (max-width: 335px) {
+  #about-me-container::after {
+    background-position: bottom 93px center;
+  }
+}
+
+@media (max-width: 325px) {
+  #about-me-container::after {
+    background-position: bottom 105px center;
+  }
 }
