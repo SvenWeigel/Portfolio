@@ -323,12 +323,14 @@ textarea:hover {
 #contact {
   position: relative;
   z-index: 201;
-  max-width: 1440px;
   margin: 0 auto;
   scroll-margin-top: 30px;
+  background-image: url("../assets/imgs/contact-purple-shadow1.png");
+  background-position: right -250px top -20px;
+  background-repeat: no-repeat;
 }
 
-#contact::before {
+/* #contact::before {
   content: "";
   position: absolute;
   top: 0;
@@ -340,7 +342,7 @@ textarea:hover {
   background-repeat: no-repeat;
   z-index: 0;
   pointer-events: none;
-}
+} */
 
 @media (max-width: 1285px) {
   #contact-content-container {
