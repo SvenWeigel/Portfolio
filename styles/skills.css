@@ -109,13 +109,20 @@
   margin: 0;
 }
 
-.hover-effect img:hover {
-  transform: scale(1.05) translateY(-50%);
-  transition: transform 0.3s ease;
+.skills-icon {
+  transition: transform 0.25s ease;
+}
+
+.skill-icons-div:hover .skills-icon {
+  transform: scale(1.05) translateY(-12px);
 }
 
 @media (max-width: 1285px) {
-  .hover-effect img:hover {
+  .skills-icon {
+    transition: none;
+  }
+
+  .skill-icons-div:hover .skills-icon {
     transform: none;
     transition: none;
   }
