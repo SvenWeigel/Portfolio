@@ -1,42 +1,19 @@
 #portfolio {
-  scroll-margin-top: 114px;
-  max-width: 1440px;
+  scroll-margin-top: -60px;
   margin: 0 auto;
+  padding-top: 220px;
+  padding-bottom: 220px;
+  margin-top: -220px;
+  margin-bottom: -220px;
+  background-image: url("../assets/imgs/portfolio-green-shadow1.png"), url("../assets/imgs/portfolio-blue-shadow1.png");
+  background-repeat: no-repeat;
+  background-position: left -530px bottom -20px, right -450px top -20px;
 }
 
 #portfolio {
   position: relative;
   z-index: 200;
   overflow: visible;
-}
-
-#portfolio::before,
-#portfolio::after {
-  content: "";
-  position: absolute;
-  pointer-events: none;
-  background-repeat: no-repeat;
-  background-size: auto;
-}
-
-#portfolio::before {
-  background-image: url("../assets/imgs/portfolio-green-shadow1.png");
-  left: 0;
-  bottom: -250px;
-  width: min(740px, 100%);
-  height: min(740px, 100%);
-  background-position: left bottom;
-  z-index: 0;
-}
-
-#portfolio::after {
-  background-image: url("../assets/imgs/portfolio-blue-shadow1.png");
-  right: 0;
-  top: -210px;
-  width: min(800px, 100%);
-  height: min(800px, 100%);
-  background-position: right top;
-  z-index: 0;
 }
 
 #portfolio-content {
