@@ -79,6 +79,8 @@ const TEXT_UPDATES = [
   ["contact-cta-text", contactCtaTemplate],
   ["contact-privacy-text", contactPrivacyTemplate, "innerHTML"],
   ["contact-send-btn", contactSendBtnTemplate],
+  ["footer-legal-link", footerLegalNoticeTemplate],
+  ["footer-impressum", footerImpressumTemplate],
   ["name", contactNamePlaceholderTemplate, "placeholder"],
   ["email", contactEmailPlaceholderTemplate, "placeholder"],
   ["message", contactMessagePlaceholderTemplate, "placeholder"],
@@ -137,7 +139,7 @@ function heroJobTemplate(lang) {
 
 function aboutMeIntroTemplate(lang) {
   return lang === "de"
-    ? "Mit großer Leidenschaft für die Webentwicklung arbeite ich mit HTML, CSS, JavaScript, TypeScript und weiteren modernen Technologien. Programmieren begeistert mich, weil ich kreative Ideen in funktionierende, greifbare Projekte verwandeln kann. Besonders motiviert mich das kontinuierliche Lernen und die Herausforderung, mit jeder neuen Technologie fachlich und persönlich zu wachsen. Lassen Sie uns vernetzen und gemeinsam innovative Lösungen entwickeln."
+    ? "Mit großer Leidenschaft für die Webentwicklung arbeite ich mit HTML, CSS, JavaScript, TypeScript und weiteren modernen Technologien. Programmieren begeistert mich, weil ich kreative Ideen in funktionierende, greifbare Projekte verwandeln kann. Besonders motiviert mich das kontinuierliche Lernen und die Herausforderung."
     : "With great passion for web development, I work with HTML, CSS, JavaScript, TypeScript and other modern technologies. Programming excites me because I can turn creative ideas into working, tangible projects. What motivates me most is continuous learning and the challenge of growing professionally and personally with every new technology. Let us connect and build innovative solutions together.";
 }
 
@@ -419,6 +421,26 @@ function contactEmailPlaceholderTemplate(lang) {
 
 function contactMessagePlaceholderTemplate(lang) {
   return lang === "de" ? "Ihre Nachricht" : "Your message";
+}
+
+/**
+ * Template for footer legal notice link.
+ * @param {'de'|'en'} lang
+ * @returns {string}
+ */
+
+function footerLegalNoticeTemplate(lang) {
+  return lang === "de" ? "Datenschutzerklärung" : "Privacy Policy";
+}
+
+/**
+ * Template for footer impressum link.
+ * @param {'de'|'en'} lang
+ * @returns {string}
+ */
+
+function footerImpressumTemplate(lang) {
+  return lang === "de" ? "Impressum" : "Legal Notice";
 }
 
 /**
