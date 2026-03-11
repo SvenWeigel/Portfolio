@@ -20,7 +20,7 @@
 }
 
 #portfolio::before {
-  background-image: url("../assets/imgs/portfolio-green-shadow.png");
+  background-image: url("../assets/imgs/portfolio-green-shadow1.png");
   left: 0;
   bottom: -250px;
   width: min(740px, 100%);
@@ -30,7 +30,7 @@
 }
 
 #portfolio::after {
-  background-image: url("../assets/imgs/portfolio-blue-shadow.png");
+  background-image: url("../assets/imgs/portfolio-blue-shadow1.png");
   right: 0;
   top: -210px;
   width: min(800px, 100%);
