@@ -377,8 +377,8 @@ function contactCtaTemplate(lang) {
 
 function contactPrivacyTemplate(lang) {
   return lang === "de"
-    ? 'Ich habe die<a id="contact-privacy-link" href="legal-notice.html">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.'
-    : 'I have read the <a id="contact-privacy-link" href="legal-notice.html">Privacy Policy</a> and agree to the processing of my data as described.';
+    ? 'Ich habe die<a id="contact-privacy-link" href="legal-notice.html">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.<br> <span class="required-field">*Pflichtfeld</span>'
+    : 'I have read the <a id="contact-privacy-link" href="legal-notice.html">Privacy Policy</a> and agree to the processing of my data as described.<br> <span class="required-field">*Required field</span>';
 }
 
 /**

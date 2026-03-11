@@ -1,9 +1,7 @@
 #portfolio {
   scroll-margin-top: -60px;
   margin: 0 auto;
-  padding-top: 220px;
   padding-bottom: 220px;
-  margin-top: -220px;
   margin-bottom: -220px;
   background-image: url("../assets/imgs/portfolio-green-shadow1.png"), url("../assets/imgs/portfolio-blue-shadow1.png");
   background-repeat: no-repeat;

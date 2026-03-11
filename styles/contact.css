@@ -168,6 +168,12 @@ textarea:hover {
   transition: border-color 0.2s ease;
 }
 
+.required-field {
+  color: green;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
 #contact-form {
   display: flex;
   flex-direction: column;
