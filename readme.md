@@ -1,5 +1,5 @@
 
-# Project Title
+# Portfolio
 This is my portfolio website that showcases my projects, skills, and experience as a developer. It represents my professional work and growth in software development.
 
 ## 🚀 About Me
