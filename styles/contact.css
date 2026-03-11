@@ -330,20 +330,6 @@ textarea:hover {
   background-repeat: no-repeat;
 }
 
-/* #contact::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url("../assets/imgs/contact-purple-shadow1.png");
-  background-position: right top -20px;
-  background-repeat: no-repeat;
-  z-index: 0;
-  pointer-events: none;
-} */
-
 @media (max-width: 1285px) {
   #contact-content-container {
     flex-direction: column;
