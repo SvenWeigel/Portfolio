@@ -194,7 +194,6 @@ header {
   border-top: 4px solid #70e61c;
 }
 footer {
-  display: flex;
   justify-content: center;
   color: white;
   position: relative;
@@ -252,5 +251,19 @@ footer span {
   #legal-first-seperator {
     display: none;
   }
+}
+
+body.impressum-sticky-footer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body.impressum-sticky-footer main {
+  flex: 1;
+}
+
+body.impressum-sticky-footer footer {
+  margin-top: auto;
 }
   
