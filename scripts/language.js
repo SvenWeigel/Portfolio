@@ -197,8 +197,8 @@ function skillsHighlightTemplate(lang) {
 
 function skillsOtherQuestionTemplate(lang) {
   return lang === "de"
-    ? 'Sie suchen nach <span id="skills-other-emphasis">anderen Fähigkeiten</span> ?'
-    : 'Are you looking for <span id="skills-other-emphasis">other skills</span> ?';
+    ? 'Sie suchen nach <span id="skills-other-emphasis">anderen Fähigkeiten</span>?'
+    : 'Are you looking for <span id="skills-other-emphasis">other skills</span>?';
 }
 
 /**
