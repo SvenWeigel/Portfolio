@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: scripts/contact.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: scripts/contact.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Check whether a string contains HTML/script-like characters or event attributes.
+ * @param {string} s - The string to inspect.
+ * @returns {boolean} True if the string contains suspicious characters.
+ */
+function hasCodeChars(s) {
+  if (!s) return false;
+  return /&lt;|>|&lt;\s*script\b|\bon\w+\s*=/.test(s);
+}
+
+/**
+ * Validate the name field value.
+ * @returns {boolean} True when the name field exists, is non-empty and contains no code.
+ */
+function isNameValid() {
+  const el = document.getElementById("name");
+  const v = ((el &amp;&amp; el.value) || "").trim();
+  return !!v &amp;&amp; !hasCodeChars(v);
+}
+
+/**
+ * Validate the email field value with a simple regex and ensure no code characters.
+ * @returns {boolean} True when the email looks valid.
+ */
+function isEmailValid() {
+  const el = document.getElementById("email");
+  const v = ((el &amp;&amp; el.value) || "").trim();
+  if (hasCodeChars(v)) return false;
+  return /^\S+@\S+\.\S+$/.test(v);
+}
+
+/**
+ * Validate the message field value.
+ * @returns {boolean} True when the message is non-empty and contains no code.
+ */
+function isMessageValid() {
+  const el = document.getElementById("message");
+  const v = ((el &amp;&amp; el.value) || "").trim();
+  return !!v &amp;&amp; !hasCodeChars(v);
+}
+
+/**
+ * Check whether the privacy checkbox is checked.
+ * @returns {boolean} True if the checkbox element exists and is checked.
+ */
+function isCheckboxValid() {
+  const el = document.getElementById("checkbox");
+  return !!(el &amp;&amp; el.checked);
+}
+
+/**
+ * Show or clear the name field error message and apply input classes.
+ * @returns {boolean} True if the name is valid.
+ */
+function showNameError() {
+  const el = document.getElementById("name");
+  const v = ((el &amp;&amp; el.value) || "").trim();
+  const ok = isNameValid();
+  const err = document.getElementById("error-name");
+  if (err)
+    err.textContent = ok
+      ? ""
+      : hasCodeChars(v)
+        ? "Code not allowed."
+        : "Please enter your name.";
+  if (el) {
+    el.classList.toggle("input-error", !ok);
+    el.classList.toggle("input-valid", ok);
+  }
+  return ok;
+}
+
+/**
+ * Show or clear the email field error message and apply input classes.
+ * @returns {boolean} True if the email is valid.
+ */
+function showEmailError() {
+  const el = document.getElementById("email");
+  const v = ((el &amp;&amp; el.value) || "").trim();
+  const ok = isEmailValid();
+  const err = document.getElementById("error-email");
+  if (err)
+    err.textContent = ok
+      ? ""
+      : hasCodeChars(v)
+        ? "Code not allowed."
+        : "Please enter a valid email.";
+  if (el) {
+    el.classList.toggle("input-error", !ok);
+    el.classList.toggle("input-valid", ok);
+  }
+  return ok;
+}
+
+/**
+ * Show or clear the message field error message and apply input classes.
+ * @returns {boolean} True if the message is valid.
+ */
+function showMessageError() {
+  const el = document.getElementById("message");
+  const v = ((el &amp;&amp; el.value) || "").trim();
+  const ok = isMessageValid();
+  const err = document.getElementById("error-message");
+  if (err)
+    err.textContent = ok
+      ? ""
+      : hasCodeChars(v)
+        ? "Code not allowed."
+        : "Please enter a message.";
+  if (el) {
+    el.classList.toggle("input-error", !ok);
+    el.classList.toggle("input-valid", ok);
+  }
+  return ok;
+}
+
+/**
+ * Show or clear the checkbox error message.
+ * @returns {boolean} True if the checkbox is checked.
+ */
+function showCheckboxError() {
+  const ok = isCheckboxValid();
+  const err = document.getElementById("error-checkbox");
+  if (err) err.textContent = ok ? "" : "Please accept the privacy policy.";
+  return ok;
+}
+
+/**
+ * Update input classes for a given field id based on validity.
+ * @param {string} id - Element id of the field.
+ * @param {boolean} ok - Whether the field is valid.
+ * @returns {void}
+ */
+function updateFieldState(id, ok) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.classList.toggle("input-valid", ok);
+  if (ok) el.classList.remove("input-error");
+}
+
+/**
+ * Enable or disable the send button depending on all field validity.
+ * @returns {void}
+ */
+function updateButtonState() {
+  const btn = document.getElementById("contact-send-btn");
+  if (!btn) return;
+  const nameOk = isNameValid();
+  const emailOk = isEmailValid();
+  const msgOk = isMessageValid();
+  const cbOk = isCheckboxValid();
+  const valid = nameOk &amp;&amp; emailOk &amp;&amp; msgOk &amp;&amp; cbOk;
+  updateFieldState("name", nameOk);
+  updateFieldState("email", emailOk);
+  updateFieldState("message", msgOk);
+  btn.disabled = !valid;
+}
+
+/**
+ * Handle blur event for a field by showing the proper error and updating button state.
+ * @param {string} id - Field element id.
+ * @returns {void}
+ */
+function handleFieldBlur(id) {
+  if (id === "name") showNameError();
+  if (id === "email") showEmailError();
+  if (id === "message") showMessageError();
+  updateButtonState();
+}
+
+/**
+ * Handle focus event for a field by clearing its error message.
+ * @param {string} id - Field element id.
+ * @returns {void}
+ */
+function handleFieldFocus(id) {
+  const err = document.getElementById("error-" + id);
+  if (err) err.textContent = "";
+}
+
+/**
+ * Handle checkbox change: update button state and clear checkbox error when checked.
+ * @param {HTMLInputElement} cb - The checkbox input element.
+ * @returns {void}
+ */
+function handleCheckboxChange(cb) {
+  updateButtonState();
+  if (cb.checked) {
+    const err = document.getElementById("error-checkbox");
+    if (err) err.textContent = "";
+  }
+}
+
+/**
+ * Attach listeners to name, email, message fields and the privacy checkbox.
+ * @returns {void}
+ */
+function attachFieldListeners() {
+  const fields = ["name", "email", "message"];
+  fields.forEach((id) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.addEventListener("blur", () => handleFieldBlur(id));
+    el.addEventListener("focus", () => handleFieldFocus(id));
+    el.addEventListener("input", updateButtonState);
+  });
+  const cb = document.getElementById("checkbox");
+  if (cb) {
+    cb.addEventListener("change", () => handleCheckboxChange(cb));
+    cb.addEventListener("blur", showCheckboxError);
+  }
+}
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#TEXT_UPDATES">TEXT_UPDATES</a></li><li><a href="global.html#aboutMeChallengesTemplate">aboutMeChallengesTemplate</a></li><li><a href="global.html#aboutMeIntroTemplate">aboutMeIntroTemplate</a></li><li><a href="global.html#aboutMeLocationTemplate">aboutMeLocationTemplate</a></li><li><a href="global.html#aboutMeOpenmindTemplate">aboutMeOpenmindTemplate</a></li><li><a href="global.html#aboutMeTitleTemplate">aboutMeTitleTemplate</a></li><li><a href="global.html#attachFieldListeners">attachFieldListeners</a></li><li><a href="global.html#attachHeaderBurger">attachHeaderBurger</a></li><li><a href="global.html#backCommentary">backCommentary</a></li><li><a href="global.html#burgerClose">burgerClose</a></li><li><a href="global.html#burgerOpen">burgerOpen</a></li><li><a href="global.html#closeModal">closeModal</a></li><li><a href="global.html#contactChallengeTemplate">contactChallengeTemplate</a></li><li><a href="global.html#contactCtaTemplate">contactCtaTemplate</a></li><li><a href="global.html#contactDescriptionTemplate">contactDescriptionTemplate</a></li><li><a href="global.html#contactEmailPlaceholderTemplate">contactEmailPlaceholderTemplate</a></li><li><a href="global.html#contactMessagePlaceholderTemplate">contactMessagePlaceholderTemplate</a></li><li><a href="global.html#contactNamePlaceholderTemplate">contactNamePlaceholderTemplate</a></li><li><a href="global.html#contactPrivacyTemplate">contactPrivacyTemplate</a></li><li><a href="global.html#contactSendBtnTemplate">contactSendBtnTemplate</a></li><li><a href="global.html#deBtn">deBtn</a></li><li><a href="global.html#deSpan">deSpan</a></li><li><a href="global.html#enBtn">enBtn</a></li><li><a href="global.html#enSpan">enSpan</a></li><li><a href="global.html#getFormValues">getFormValues</a></li><li><a href="global.html#handleCheckboxChange">handleCheckboxChange</a></li><li><a href="global.html#handleFieldBlur">handleFieldBlur</a></li><li><a href="global.html#handleFieldFocus">handleFieldFocus</a></li><li><a href="global.html#handleResponse">handleResponse</a></li><li><a href="global.html#hasCodeChars">hasCodeChars</a></li><li><a href="global.html#headerTemplate">headerTemplate</a></li><li><a href="global.html#init">init</a></li><li><a href="global.html#isCheckboxValid">isCheckboxValid</a></li><li><a href="global.html#isEmailValid">isEmailValid</a></li><li><a href="global.html#isMessageValid">isMessageValid</a></li><li><a href="global.html#isNameValid">isNameValid</a></li><li><a href="global.html#nextCommentary">nextCommentary</a></li><li><a href="global.html#portfolioDabubbleDescTemplate">portfolioDabubbleDescTemplate</a></li><li><a href="global.html#portfolioDabubbleTitleTemplate">portfolioDabubbleTitleTemplate</a></li><li><a href="global.html#portfolioDescriptionTemplate">portfolioDescriptionTemplate</a></li><li><a href="global.html#portfolioJoinDescTemplate">portfolioJoinDescTemplate</a></li><li><a href="global.html#portfolioJoinTitleTemplate">portfolioJoinTitleTemplate</a></li><li><a href="global.html#portfolioLiveBtnTemplate">portfolioLiveBtnTemplate</a></li><li><a href="global.html#portfolioPokedexDescTemplate">portfolioPokedexDescTemplate</a></li><li><a href="global.html#portfolioPokedexTitleTemplate">portfolioPokedexTitleTemplate</a></li><li><a href="global.html#portfolioPolloDescTemplate">portfolioPolloDescTemplate</a></li><li><a href="global.html#portfolioPolloTitleTemplate">portfolioPolloTitleTemplate</a></li><li><a href="global.html#postContactForm">postContactForm</a></li><li><a href="global.html#resetForm">resetForm</a></li><li><a href="global.html#sendContactForm">sendContactForm</a></li><li><a href="global.html#setDe">setDe</a></li><li><a href="global.html#showCheckboxError">showCheckboxError</a></li><li><a href="global.html#showEmailError">showEmailError</a></li><li><a href="global.html#showMessageError">showMessageError</a></li><li><a href="global.html#showNameError">showNameError</a></li><li><a href="global.html#skillsContactBtnTemplate">skillsContactBtnTemplate</a></li><li><a href="global.html#skillsHighlightTemplate">skillsHighlightTemplate</a></li><li><a href="global.html#skillsMoreLearningTemplate">skillsMoreLearningTemplate</a></li><li><a href="global.html#skillsOtherQuestionTemplate">skillsOtherQuestionTemplate</a></li><li><a href="global.html#switchCommentary">switchCommentary</a></li><li><a href="global.html#updateButtonState">updateButtonState</a></li><li><a href="global.html#updateFieldState">updateFieldState</a></li><li><a href="global.html#validateFormValues">validateFormValues</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.5</a> on Mon Mar 09 2026 17:19:36 GMT+0100 (Mitteleuropäische Normalzeit)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

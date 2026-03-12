@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: scripts/commentary.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: scripts/commentary.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>let commentarys = [
+	{
+		text: "Sven bringt regelmäßig eigene Ideen in die Teamarbeit ein und bereichert damit unsere gemeinsame Arbeit. Dabei überzeugt er nicht nur durch kreative Vorschläge, sondern auch durch die Fähigkeit, diese eigenständig und zielorientiert umzusetzen.",
+		name: "Valdrin M. - Team Partner"
+	},
+	{
+		text: "Sehr zuverlässiger Entwickler mit Blick für sauberen Code und Benutzerfreundlichkeit. Sven liefert pünktlich und kommuniziert klar über Fortschritte und Entscheidungen.",
+		name: "Anna K. - Product Owner"
+	},
+	{
+		text: "Kreative Lösungen und gutes UX-Verständnis. Sven gestaltet Komponenten, die sowohl wartbar als auch zugänglich sind.",
+		name: "Lars B. - UX Designer"
+	}
+];
+
+let currentCommentary = 0;
+
+const commentaryText = document.getElementById("references-commentary-text");
+const commentaryName = document.getElementById("references-commentary-name");
+const commentaryLeftBtn = document.getElementById("back");
+const commentaryRightBtn = document.getElementById("next");
+const commentaryPoints = document.querySelectorAll("#commentary-nav-bar .active-point, #commentary-nav-bar .point");
+
+function updateActivePoint() {
+    commentaryPoints.forEach((point, index) => {
+        point.classList.toggle("active-point", index === currentCommentary);
+        point.classList.toggle("point", index !== currentCommentary);
+    });
+}
+
+/**
+ * Update the visual indicator for the currently active commentary point.
+ * @returns {void}
+ */
+
+function switchCommentary(i){
+	currentCommentary = i;
+    commentaryText.textContent = commentarys[currentCommentary].text;
+    commentaryName.textContent = commentarys[currentCommentary].name;
+    updateActivePoint();
+}
+
+/**
+ * Switch to a specific commentary by index and update DOM.
+ * @param {number} i - Index of the commentary to show.
+ * @returns {void}
+ */
+
+function nextCommentary(){
+    if(currentCommentary &lt; commentarys.length - 1){
+        currentCommentary++;
+    } else {
+        currentCommentary = 0;
+    }
+    switchCommentary(currentCommentary);
+}
+
+/**
+ * Advance to the next commentary, wrapping to the start when reaching the end.
+ * @returns {void}
+ */
+
+function backCommentary(){
+    if(currentCommentary > 0){
+        currentCommentary--;
+    } else {
+        currentCommentary = commentarys.length - 1;
+    }
+    switchCommentary(currentCommentary);
+}
+
+/**
+ * Go back to the previous commentary, wrapping to the last when at the start.
+ * @returns {void}
+ */
+
+switchCommentary(currentCommentary);</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#TEXT_UPDATES">TEXT_UPDATES</a></li><li><a href="global.html#aboutMeChallengesTemplate">aboutMeChallengesTemplate</a></li><li><a href="global.html#aboutMeIntroTemplate">aboutMeIntroTemplate</a></li><li><a href="global.html#aboutMeLocationTemplate">aboutMeLocationTemplate</a></li><li><a href="global.html#aboutMeOpenmindTemplate">aboutMeOpenmindTemplate</a></li><li><a href="global.html#aboutMeTitleTemplate">aboutMeTitleTemplate</a></li><li><a href="global.html#attachFieldListeners">attachFieldListeners</a></li><li><a href="global.html#attachHeaderBurger">attachHeaderBurger</a></li><li><a href="global.html#backCommentary">backCommentary</a></li><li><a href="global.html#burgerClose">burgerClose</a></li><li><a href="global.html#burgerOpen">burgerOpen</a></li><li><a href="global.html#closeModal">closeModal</a></li><li><a href="global.html#contactChallengeTemplate">contactChallengeTemplate</a></li><li><a href="global.html#contactCtaTemplate">contactCtaTemplate</a></li><li><a href="global.html#contactDescriptionTemplate">contactDescriptionTemplate</a></li><li><a href="global.html#contactEmailPlaceholderTemplate">contactEmailPlaceholderTemplate</a></li><li><a href="global.html#contactMessagePlaceholderTemplate">contactMessagePlaceholderTemplate</a></li><li><a href="global.html#contactNamePlaceholderTemplate">contactNamePlaceholderTemplate</a></li><li><a href="global.html#contactPrivacyTemplate">contactPrivacyTemplate</a></li><li><a href="global.html#contactSendBtnTemplate">contactSendBtnTemplate</a></li><li><a href="global.html#deBtn">deBtn</a></li><li><a href="global.html#deSpan">deSpan</a></li><li><a href="global.html#enBtn">enBtn</a></li><li><a href="global.html#enSpan">enSpan</a></li><li><a href="global.html#getFormValues">getFormValues</a></li><li><a href="global.html#handleCheckboxChange">handleCheckboxChange</a></li><li><a href="global.html#handleFieldBlur">handleFieldBlur</a></li><li><a href="global.html#handleFieldFocus">handleFieldFocus</a></li><li><a href="global.html#handleResponse">handleResponse</a></li><li><a href="global.html#hasCodeChars">hasCodeChars</a></li><li><a href="global.html#headerTemplate">headerTemplate</a></li><li><a href="global.html#init">init</a></li><li><a href="global.html#isCheckboxValid">isCheckboxValid</a></li><li><a href="global.html#isEmailValid">isEmailValid</a></li><li><a href="global.html#isMessageValid">isMessageValid</a></li><li><a href="global.html#isNameValid">isNameValid</a></li><li><a href="global.html#nextCommentary">nextCommentary</a></li><li><a href="global.html#portfolioDabubbleDescTemplate">portfolioDabubbleDescTemplate</a></li><li><a href="global.html#portfolioDabubbleTitleTemplate">portfolioDabubbleTitleTemplate</a></li><li><a href="global.html#portfolioDescriptionTemplate">portfolioDescriptionTemplate</a></li><li><a href="global.html#portfolioJoinDescTemplate">portfolioJoinDescTemplate</a></li><li><a href="global.html#portfolioJoinTitleTemplate">portfolioJoinTitleTemplate</a></li><li><a href="global.html#portfolioLiveBtnTemplate">portfolioLiveBtnTemplate</a></li><li><a href="global.html#portfolioPokedexDescTemplate">portfolioPokedexDescTemplate</a></li><li><a href="global.html#portfolioPokedexTitleTemplate">portfolioPokedexTitleTemplate</a></li><li><a href="global.html#portfolioPolloDescTemplate">portfolioPolloDescTemplate</a></li><li><a href="global.html#portfolioPolloTitleTemplate">portfolioPolloTitleTemplate</a></li><li><a href="global.html#postContactForm">postContactForm</a></li><li><a href="global.html#resetForm">resetForm</a></li><li><a href="global.html#sendContactForm">sendContactForm</a></li><li><a href="global.html#setDe">setDe</a></li><li><a href="global.html#showCheckboxError">showCheckboxError</a></li><li><a href="global.html#showEmailError">showEmailError</a></li><li><a href="global.html#showMessageError">showMessageError</a></li><li><a href="global.html#showNameError">showNameError</a></li><li><a href="global.html#skillsContactBtnTemplate">skillsContactBtnTemplate</a></li><li><a href="global.html#skillsHighlightTemplate">skillsHighlightTemplate</a></li><li><a href="global.html#skillsMoreLearningTemplate">skillsMoreLearningTemplate</a></li><li><a href="global.html#skillsOtherQuestionTemplate">skillsOtherQuestionTemplate</a></li><li><a href="global.html#switchCommentary">switchCommentary</a></li><li><a href="global.html#updateButtonState">updateButtonState</a></li><li><a href="global.html#updateFieldState">updateFieldState</a></li><li><a href="global.html#validateFormValues">validateFormValues</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.5</a> on Mon Mar 09 2026 17:19:36 GMT+0100 (Mitteleuropäische Normalzeit)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
