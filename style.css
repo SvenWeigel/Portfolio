@@ -115,11 +115,11 @@ body.lang-de #i-am {
 }
 
 .fade-up.in-view {
-  animation: fadeInLeftToRight 900ms cubic-bezier(.22,.98,.38,1) both;
+  animation: fadeInLeftToRight 1s cubic-bezier(.22,.98,.38,1) both;
 }
 
 .fade-up-right.in-view {
-  animation: fadeInRightToLeft 900ms cubic-bezier(.22,.98,.38,1) both;
+  animation: fadeInRightToLeft 1s cubic-bezier(.22,.98,.38,1) both;
 }
 
 @keyframes fadeInLeftToRight {
